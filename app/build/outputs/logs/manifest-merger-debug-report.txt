@@ -1,0 +1,215 @@
+-- Merging decision tree log ---
+provider#android.support.v4.content.FileProvider
+INJECTED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:25:9-33:20
+	android:grantUriPermissions
+		ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:29:13-47
+	android:authorities
+		INJECTED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:27:13-60
+	android:exported
+		ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:28:13-37
+	android:name
+		ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:26:13-67
+manifest
+ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:2:1-39:12
+MERGED from [com.android.support:design:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\d13cb96f9f75da45cbe8fb9b9f3b8a81\design-26.0.0\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:appcompat-v7:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\e6a4c4272ab27e103526904bdcebf48a\appcompat-v7-26.0.0\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\cb20b76ed225fe8217fdebe6b4cd159d\constraint-layout-1.0.2\AndroidManifest.xml:2:1-11:12
+MERGED from [com.jakewharton:butterknife:8.7.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\f921caea90fce6ad4c254eafd0795b12\butterknife-8.7.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\bd3a21045bf7a38a9b8d7bd9028417da\animated-vector-drawable-26.0.0\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\a8ea832f8a05c867bc933f331c3030bc\support-vector-drawable-26.0.0\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:recyclerview-v7:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\47a9bc283b21a7809a33b73fe1bcb009\recyclerview-v7-26.0.0\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:transition:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\b5ce530f76759c0a395492117ea5125d\transition-26.0.0\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\af65d76596cf995049612f2c544af492\support-v4-26.0.0\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\6095677078b39271c987ed6f771f06a8\support-media-compat-26.0.0\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\a5b230f3d235d61bac5923a2791346e6\support-fragment-26.0.0\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\2610e246d07b4f78c02afde952208d4a\support-core-utils-26.0.0\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\4947340de164beff1bc413b1322a432d\support-core-ui-26.0.0\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\b758f2df2dfc1b8314a2e4ca40419760\support-compat-26.0.0\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:multidex:1.0.1] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\80e076374353cb353c85899d1c187449\multidex-1.0.1\AndroidManifest.xml:16:1-19:12
+INJECTED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:2:1-39:12
+	package
+		ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:3:5-45
+		INJECTED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:2:1-39:12
+		INJECTED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:2:1-39:12
+		INJECTED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:2:11-69
+application
+ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:5:5-34:19
+MERGED from [com.android.support:design:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\d13cb96f9f75da45cbe8fb9b9f3b8a81\design-26.0.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:design:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\d13cb96f9f75da45cbe8fb9b9f3b8a81\design-26.0.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\e6a4c4272ab27e103526904bdcebf48a\appcompat-v7-26.0.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\e6a4c4272ab27e103526904bdcebf48a\appcompat-v7-26.0.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\cb20b76ed225fe8217fdebe6b4cd159d\constraint-layout-1.0.2\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\cb20b76ed225fe8217fdebe6b4cd159d\constraint-layout-1.0.2\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\bd3a21045bf7a38a9b8d7bd9028417da\animated-vector-drawable-26.0.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\bd3a21045bf7a38a9b8d7bd9028417da\animated-vector-drawable-26.0.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\a8ea832f8a05c867bc933f331c3030bc\support-vector-drawable-26.0.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\a8ea832f8a05c867bc933f331c3030bc\support-vector-drawable-26.0.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\47a9bc283b21a7809a33b73fe1bcb009\recyclerview-v7-26.0.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\47a9bc283b21a7809a33b73fe1bcb009\recyclerview-v7-26.0.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\b5ce530f76759c0a395492117ea5125d\transition-26.0.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\b5ce530f76759c0a395492117ea5125d\transition-26.0.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\af65d76596cf995049612f2c544af492\support-v4-26.0.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\af65d76596cf995049612f2c544af492\support-v4-26.0.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\6095677078b39271c987ed6f771f06a8\support-media-compat-26.0.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\6095677078b39271c987ed6f771f06a8\support-media-compat-26.0.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\a5b230f3d235d61bac5923a2791346e6\support-fragment-26.0.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\a5b230f3d235d61bac5923a2791346e6\support-fragment-26.0.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\2610e246d07b4f78c02afde952208d4a\support-core-utils-26.0.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\2610e246d07b4f78c02afde952208d4a\support-core-utils-26.0.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\4947340de164beff1bc413b1322a432d\support-core-ui-26.0.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\4947340de164beff1bc413b1322a432d\support-core-ui-26.0.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\b758f2df2dfc1b8314a2e4ca40419760\support-compat-26.0.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\b758f2df2dfc1b8314a2e4ca40419760\support-compat-26.0.0\AndroidManifest.xml:25:5-29:19
+	android:supportsRtl
+		ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:8:9-41
+	android:roundIcon
+		ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:9:9-54
+	android:icon
+		ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:11:9-40
+activity#com.example.vande.scouting2020.MainActivity
+ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:12:9-18:20
+	android:name
+		ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:12:19-77
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:13:13-17:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:14:17-69
+	android:name
+		ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:16:17-77
+	android:name
+		ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:16:27-74
+activity#com.example.vande.scouting2020.ScouterInitialsActivity
+ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:19:9-100
+	android:name
+		ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:19:19-88
+activity#com.example.vande.scouting2020.AutonActivity
+ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:20:9-90
+	android:name
+		ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:20:19-78
+activity#com.example.vande.scouting2020.TeleopActivity
+ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:21:9-91
+	android:name
+		ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:21:19-79
+activity#com.example.vande.scouting2020.PitActivity
+ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:22:9-88
+	android:name
+		ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:22:19-76
+activity#com.example.vande.scouting2020.SendDataActivity
+ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:23:9-93
+	android:name
+		ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:23:19-81
+uses-permission#android.permission.CAMERA
+ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:36:5-65
+	android:name
+		ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:36:22-62
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:37:5-81
+	android:name
+		ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:37:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:38:5-80
+	android:name
+		ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:38:22-77
+uses-sdk
+INJECTED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:design:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\d13cb96f9f75da45cbe8fb9b9f3b8a81\design-26.0.0\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\d13cb96f9f75da45cbe8fb9b9f3b8a81\design-26.0.0\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\e6a4c4272ab27e103526904bdcebf48a\appcompat-v7-26.0.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\e6a4c4272ab27e103526904bdcebf48a\appcompat-v7-26.0.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\cb20b76ed225fe8217fdebe6b4cd159d\constraint-layout-1.0.2\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\cb20b76ed225fe8217fdebe6b4cd159d\constraint-layout-1.0.2\AndroidManifest.xml:5:5-7:41
+MERGED from [com.jakewharton:butterknife:8.7.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\f921caea90fce6ad4c254eafd0795b12\butterknife-8.7.0\AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton:butterknife:8.7.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\f921caea90fce6ad4c254eafd0795b12\butterknife-8.7.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\bd3a21045bf7a38a9b8d7bd9028417da\animated-vector-drawable-26.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\bd3a21045bf7a38a9b8d7bd9028417da\animated-vector-drawable-26.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\a8ea832f8a05c867bc933f331c3030bc\support-vector-drawable-26.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\a8ea832f8a05c867bc933f331c3030bc\support-vector-drawable-26.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\47a9bc283b21a7809a33b73fe1bcb009\recyclerview-v7-26.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\47a9bc283b21a7809a33b73fe1bcb009\recyclerview-v7-26.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\b5ce530f76759c0a395492117ea5125d\transition-26.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\b5ce530f76759c0a395492117ea5125d\transition-26.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\af65d76596cf995049612f2c544af492\support-v4-26.0.0\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\af65d76596cf995049612f2c544af492\support-v4-26.0.0\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\6095677078b39271c987ed6f771f06a8\support-media-compat-26.0.0\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\6095677078b39271c987ed6f771f06a8\support-media-compat-26.0.0\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\a5b230f3d235d61bac5923a2791346e6\support-fragment-26.0.0\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\a5b230f3d235d61bac5923a2791346e6\support-fragment-26.0.0\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\2610e246d07b4f78c02afde952208d4a\support-core-utils-26.0.0\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\2610e246d07b4f78c02afde952208d4a\support-core-utils-26.0.0\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\4947340de164beff1bc413b1322a432d\support-core-ui-26.0.0\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\4947340de164beff1bc413b1322a432d\support-core-ui-26.0.0\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\b758f2df2dfc1b8314a2e4ca40419760\support-compat-26.0.0\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\b758f2df2dfc1b8314a2e4ca40419760\support-compat-26.0.0\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:multidex:1.0.1] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\80e076374353cb353c85899d1c187449\multidex-1.0.1\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:multidex:1.0.1] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\80e076374353cb353c85899d1c187449\multidex-1.0.1\AndroidManifest.xml:18:5-42
+INJECTED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\d13cb96f9f75da45cbe8fb9b9f3b8a81\design-26.0.0\AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:30:13-32:57
+	android:resource
+		ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:32:17-55
+	android:name
+		ADDED from C:\Users\vande\StudioProjects\2020Scouting\app\src\main\AndroidManifest.xml:31:17-67
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\d13cb96f9f75da45cbe8fb9b9f3b8a81\design-26.0.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\e6a4c4272ab27e103526904bdcebf48a\appcompat-v7-26.0.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\e6a4c4272ab27e103526904bdcebf48a\appcompat-v7-26.0.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\bd3a21045bf7a38a9b8d7bd9028417da\animated-vector-drawable-26.0.0\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\bd3a21045bf7a38a9b8d7bd9028417da\animated-vector-drawable-26.0.0\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\a8ea832f8a05c867bc933f331c3030bc\support-vector-drawable-26.0.0\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\a8ea832f8a05c867bc933f331c3030bc\support-vector-drawable-26.0.0\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\47a9bc283b21a7809a33b73fe1bcb009\recyclerview-v7-26.0.0\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\47a9bc283b21a7809a33b73fe1bcb009\recyclerview-v7-26.0.0\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\b5ce530f76759c0a395492117ea5125d\transition-26.0.0\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\b5ce530f76759c0a395492117ea5125d\transition-26.0.0\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\af65d76596cf995049612f2c544af492\support-v4-26.0.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\af65d76596cf995049612f2c544af492\support-v4-26.0.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\6095677078b39271c987ed6f771f06a8\support-media-compat-26.0.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\6095677078b39271c987ed6f771f06a8\support-media-compat-26.0.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\a5b230f3d235d61bac5923a2791346e6\support-fragment-26.0.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\a5b230f3d235d61bac5923a2791346e6\support-fragment-26.0.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\2610e246d07b4f78c02afde952208d4a\support-core-utils-26.0.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\2610e246d07b4f78c02afde952208d4a\support-core-utils-26.0.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\4947340de164beff1bc413b1322a432d\support-core-ui-26.0.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\4947340de164beff1bc413b1322a432d\support-core-ui-26.0.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\b758f2df2dfc1b8314a2e4ca40419760\support-compat-26.0.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\b758f2df2dfc1b8314a2e4ca40419760\support-compat-26.0.0\AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:design:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\d13cb96f9f75da45cbe8fb9b9f3b8a81\design-26.0.0\AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:design:26.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\d13cb96f9f75da45cbe8fb9b9f3b8a81\design-26.0.0\AndroidManifest.xml:27:13-51

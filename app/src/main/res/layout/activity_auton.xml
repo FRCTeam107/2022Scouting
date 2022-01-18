@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="vertical">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/matchNumber_input_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="18dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:hint="@string/matchNumberHeading"
+                app:errorEnabled="true"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/matchNumber_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:textSize="16sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/teamNumber_input_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="18dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginStart="18dp"
+                android:hint="@string/teamNumberHeading"
+                app:errorEnabled="true"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/matchNumber_input_layout">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/teamNumber_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="5"
+                    android:inputType="number"
+                    android:textSize="16sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/initiationLine_TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/initiationLineHeading"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/teamNumber_input_layout"
+                tools:layout_editor_absoluteX="0dp" />
+
+
+            <CheckBox
+                android:id="@+id/initiationLine_chkbx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/initiationLine_TextView"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <Space
+                android:id="@+id/spacer"
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/initiationLine_chkbx"/>
+
+            <Button
+                android:id="@+id/decrease_autonInnerPort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="decrease_autonInnerPortInput"
+                android:text="-"
+                app:layout_constraintTop_toBottomOf="@+id/spacer"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/autonInnerPort_input_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/autonInnerPowerCellsScored"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toStartOf="@+id/increase_autonInnerPort"
+                app:layout_constraintStart_toEndOf="@id/decrease_autonInnerPort"
+                app:layout_constraintTop_toBottomOf="@+id/spacer"
+                tools:ignore="UnknownId">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/autonInnerPort_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:enabled="true"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/increase_autonInnerPort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="increase_autonInnerPortInput"
+                android:text="+"
+                app:layout_constraintTop_toBottomOf="@+id/spacer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/autonInnerPort_input_layout" />
+
+            <Button
+                android:id="@+id/decrease_autonOuterPort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="decrease_autonOuterPortInput"
+                android:text="-"
+                app:layout_constraintTop_toBottomOf="@+id/autonInnerPort_input_layout"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/autonOuterPort_input_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/autonOuterPowerCellsScored"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toStartOf="@+id/increase_autonOuterPort"
+                app:layout_constraintStart_toEndOf="@id/decrease_autonOuterPort"
+                app:layout_constraintTop_toBottomOf="@+id/autonInnerPort_input_layout"
+                tools:ignore="UnknownId">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/autonOuterPort_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:enabled="true"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/increase_autonOuterPort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="increase_autonOuterPortInput"
+                android:text="+"
+                app:layout_constraintTop_toBottomOf="@+id/autonInnerPort_input_layout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/autonInnerPort_input_layout" />
+
+            <Button
+                android:id="@+id/decrease_autonBottomPort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="decrease_autonBottomPortInput"
+                android:text="-"
+                app:layout_constraintTop_toBottomOf="@+id/autonOuterPort_input_layout"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/autonBottomPort_input_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/autonBottomPowerCellsScored"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toStartOf="@+id/increase_autonOuterPort"
+                app:layout_constraintStart_toEndOf="@id/decrease_autonOuterPort"
+                app:layout_constraintTop_toBottomOf="@+id/autonOuterPort_input_layout"
+                tools:ignore="UnknownId">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/autonBottomPort_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:enabled="true"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/increase_autonBottomPort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="increase_autonBottomPortInput"
+                android:text="+"
+                app:layout_constraintTop_toBottomOf="@+id/autonOuterPort_input_layout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/autonOuterPort_input_layout" />
+
+            <Button
+                android:id="@+id/next_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="onShowTeleop"
+                android:text="@string/nextButton"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/autonBottomPort_input_layout"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="81dp" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+</FrameLayout>
