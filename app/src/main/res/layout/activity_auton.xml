@@ -66,26 +66,101 @@
 
             </android.support.design.widget.TextInputLayout>
 
-            <TextView
-                android:id="@+id/initiationLine_TextView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/initiationLineHeading"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/teamNumber_input_layout"
-                tools:layout_editor_absoluteX="0dp" />
 
 
-            <CheckBox
-                android:id="@+id/initiationLine_chkbx"
+            <Button
+                android:id="@+id/decrease_autonHighHub"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                app:layout_constraintTop_toBottomOf="@+id/initiationLine_TextView"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent" />
+                android:onClick="decrease_autonHighHubInput"
+                android:text="-"
+                app:layout_constraintTop_toBottomOf="@+id/teamNumber_input_layout"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/autonHighHub_input_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Balls in high hub"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toStartOf="@+id/increase_autonHighHub"
+                app:layout_constraintStart_toEndOf="@id/decrease_autonHighHub"
+                app:layout_constraintTop_toBottomOf="@+id/teamNumber_input_layout"
+                tools:ignore="UnknownId">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/autonHighHub_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:enabled="true"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/increase_autonHighHub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="increase_autonHighHubInput"
+                android:text="+"
+                app:layout_constraintTop_toBottomOf="@+id/teamNumber_input_layout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/autonHighHub_input_layout" />
+
+            <Button
+                android:id="@+id/decrease_autonLowHub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="decrease_autonLowHubInput"
+                android:text="-"
+                app:layout_constraintTop_toBottomOf="@+id/autonHighHub_input_layout"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/autonLowHub_input_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Balls in low hub"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toStartOf="@+id/increase_autonLowHub"
+                app:layout_constraintStart_toEndOf="@id/decrease_autonLowHub"
+                app:layout_constraintTop_toBottomOf="@+id/autonHighHub_input_layout"
+                tools:ignore="UnknownId">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/autonLowHub_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:enabled="true"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/increase_autonLowHub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="increase_autonLowHubInput"
+                android:text="+"
+                app:layout_constraintTop_toBottomOf="@+id/autonHighHub_input_layout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/autonHighHub_input_layout" />
 
             <Space
                 android:id="@+id/spacer"
@@ -93,148 +168,50 @@
                 android:layout_height="30dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/initiationLine_chkbx"/>
+                app:layout_constraintTop_toBottomOf="@+id/increase_autonLowHub" />
 
-            <Button
-                android:id="@+id/decrease_autonInnerPort"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="decrease_autonInnerPortInput"
-                android:text="-"
-                app:layout_constraintTop_toBottomOf="@+id/spacer"
-                app:layout_constraintHorizontal_chainStyle="spread"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/autonInnerPort_input_layout"
+            <TextView
+                android:id="@+id/Taxi_TextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:hint="@string/autonInnerPowerCellsScored"
-                app:errorEnabled="true"
-                app:layout_constraintEnd_toStartOf="@+id/increase_autonInnerPort"
-                app:layout_constraintStart_toEndOf="@id/decrease_autonInnerPort"
-                app:layout_constraintTop_toBottomOf="@+id/spacer"
-                tools:ignore="UnknownId">
-
-                <android.support.design.widget.TextInputEditText
-                    android:id="@+id/autonInnerPort_input"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:inputType="number"
-                    android:clickable="false"
-                    android:cursorVisible="false"
-                    android:focusable="false"
-                    android:focusableInTouchMode="false"
-                    android:enabled="true"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="parent" />
-            </android.support.design.widget.TextInputLayout>
-
-            <Button
-                android:id="@+id/increase_autonInnerPort"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="increase_autonInnerPortInput"
-                android:text="+"
-                app:layout_constraintTop_toBottomOf="@+id/spacer"
+                android:gravity="center"
+                android:text="Taxi"
+                android:textSize="25dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/autonInnerPort_input_layout" />
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spacer" />
 
-            <Button
-                android:id="@+id/decrease_autonOuterPort"
+            <CheckBox
+                android:id="@+id/Taxi_chkbx"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="decrease_autonOuterPortInput"
-                android:text="-"
-                app:layout_constraintTop_toBottomOf="@+id/autonInnerPort_input_layout"
-                app:layout_constraintHorizontal_chainStyle="spread"
-                app:layout_constraintStart_toStartOf="parent" />
+                android:gravity="center"
+                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Taxi_TextView" />
 
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/autonOuterPort_input_layout"
+            <TextView
+                android:id="@+id/humanPlayerShot_TextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:hint="@string/autonOuterPowerCellsScored"
-                app:errorEnabled="true"
-                app:layout_constraintEnd_toStartOf="@+id/increase_autonOuterPort"
-                app:layout_constraintStart_toEndOf="@id/decrease_autonOuterPort"
-                app:layout_constraintTop_toBottomOf="@+id/autonInnerPort_input_layout"
-                tools:ignore="UnknownId">
-
-                <android.support.design.widget.TextInputEditText
-                    android:id="@+id/autonOuterPort_input"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:inputType="number"
-                    android:clickable="false"
-                    android:cursorVisible="false"
-                    android:focusable="false"
-                    android:focusableInTouchMode="false"
-                    android:enabled="true"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="parent" />
-            </android.support.design.widget.TextInputLayout>
-
-            <Button
-                android:id="@+id/increase_autonOuterPort"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="increase_autonOuterPortInput"
-                android:text="+"
-                app:layout_constraintTop_toBottomOf="@+id/autonInnerPort_input_layout"
+                android:gravity="center"
+                android:text="Human Player Shot"
+                android:textSize="25dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/autonInnerPort_input_layout" />
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Taxi_chkbx" />
 
-            <Button
-                android:id="@+id/decrease_autonBottomPort"
+            <CheckBox
+                android:id="@+id/humanPlayershot_chkbx"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="decrease_autonBottomPortInput"
-                android:text="-"
-                app:layout_constraintTop_toBottomOf="@+id/autonOuterPort_input_layout"
-                app:layout_constraintHorizontal_chainStyle="spread"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/autonBottomPort_input_layout"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:hint="@string/autonBottomPowerCellsScored"
-                app:errorEnabled="true"
-                app:layout_constraintEnd_toStartOf="@+id/increase_autonOuterPort"
-                app:layout_constraintStart_toEndOf="@id/decrease_autonOuterPort"
-                app:layout_constraintTop_toBottomOf="@+id/autonOuterPort_input_layout"
-                tools:ignore="UnknownId">
-
-                <android.support.design.widget.TextInputEditText
-                    android:id="@+id/autonBottomPort_input"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:inputType="number"
-                    android:clickable="false"
-                    android:cursorVisible="false"
-                    android:focusable="false"
-                    android:focusableInTouchMode="false"
-                    android:enabled="true"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="parent" />
-            </android.support.design.widget.TextInputLayout>
-
-            <Button
-                android:id="@+id/increase_autonBottomPort"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="increase_autonBottomPortInput"
-                android:text="+"
-                app:layout_constraintTop_toBottomOf="@+id/autonOuterPort_input_layout"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/autonOuterPort_input_layout" />
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/humanPlayerShot_TextView"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
 
             <Button
                 android:id="@+id/next_button"
@@ -243,11 +220,12 @@
                 android:onClick="onShowTeleop"
                 android:text="@string/nextButton"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/autonBottomPort_input_layout"
-                tools:layout_editor_absoluteX="8dp"
-                tools:layout_editor_absoluteY="81dp" />
+                app:layout_constraintTop_toBottomOf="@+id/humanPlayershot_chkbx"
+                app:layout_constraintVertical_bias="0.152" />
+
 
         </android.support.constraint.ConstraintLayout>
 

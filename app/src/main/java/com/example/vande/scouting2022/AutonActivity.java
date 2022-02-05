@@ -42,14 +42,14 @@ public class AutonActivity extends AppCompatActivity implements View.OnKeyListen
     @BindView(R.id.matchNumber_input_layout)
     public TextInputLayout matchNumberInputLayout;
 
-    @BindView(R.id.autonInnerPort_input_layout)
-    public TextInputLayout autonInnerPortInputLayout;
+    @BindView(R.id.autonHighHub_input_layout)
+    public TextInputLayout autonHighHubInputLayout;
 
-    @BindView(R.id.autonOuterPort_input_layout)
-    public TextInputLayout autonOuterPortInputLayout;
+    @BindView(R.id.autonLowHub_input_layout)
+    public TextInputLayout autonLowHubInputLayout;
 
-    @BindView(R.id.autonBottomPort_input_layout)
-    public TextInputLayout autonBottomPortInputLayout;
+   // @BindView(R.id.autonBottomPort_input_layout)
+   // public TextInputLayout autonBottomPortInputLayout;
 
     @BindView(R.id.teamNumber_input)
     public EditText teamNumberInput;
@@ -57,17 +57,20 @@ public class AutonActivity extends AppCompatActivity implements View.OnKeyListen
     @BindView(R.id.matchNumber_input)
     public EditText matchNumberInput;
 
-    @BindView(R.id.initiationLine_chkbx)
-    public CheckBox initiationLinechkbx;
+    @BindView(R.id.Taxi_chkbx)
+    public CheckBox Taxichkbx;
 
-    @BindView(R.id.autonInnerPort_input)
-    public TextInputEditText autonInnerPortInput;
+    @BindView(R.id.humanPlayershot_chkbx)
+    public CheckBox humanPlayershotchkbx;
 
-    @BindView(R.id.autonOuterPort_input)
-    public TextInputEditText autonOuterPortInput;
+    @BindView(R.id.autonHighHub_input)
+    public TextInputEditText autonHighHubInput;
 
-    @BindView(R.id.autonBottomPort_input)
-    public TextInputEditText autonBottomPortInput;
+    @BindView(R.id.autonLowHub_input)
+    public TextInputEditText autonLowHubInput;
+
+  //  @BindView(R.id.autonBottomPort_input)
+   // public TextInputEditText autonBottomPortInput;
 
     @BindView(R.id.next_button)
     public Button nextButton;
@@ -75,8 +78,8 @@ public class AutonActivity extends AppCompatActivity implements View.OnKeyListen
     private ArrayList<CharSequence> autonDataStringList;
     public static final int REQUEST_CODE = 1;
 
-    int autonInnerPort = 0;
-    int autonOuterPort = 0;
+    int autonHighHub = 0;
+    int autonLowHub = 0;
     int autonBottomPort = 0;
 
     /*When this activity is first called,
@@ -91,9 +94,9 @@ public class AutonActivity extends AppCompatActivity implements View.OnKeyListen
         ButterKnife.bind(this);
         autonDataStringList = new ArrayList<>();
 
-        displayAutonInnerPortInput(autonInnerPort);
-        displayAutonOuterPortInput(autonOuterPort);
-        displayAutonBottomPortInput(autonBottomPort);
+        displayAutonHighHubInput(autonHighHub);
+        displayAutonLowHubInput(autonLowHub);
+        //displayAutonBottomPortInput(autonBottomPort);
 
         checkForPermissions();
     }
@@ -147,58 +150,58 @@ public class AutonActivity extends AppCompatActivity implements View.OnKeyListen
     }
 
     //Auton Inner Power Cell Score
-    public void decrease_autonInnerPortInput(View view) {
-        if (autonInnerPort != 0) {
-            autonInnerPort -= 1;
-            displayAutonInnerPortInput(autonInnerPort);
+    public void decrease_autonHighHubInput(View view) {
+        if (autonHighHub != 0) {
+            autonHighHub -= 1;
+            displayAutonHighHubInput(autonHighHub);
         } else {
         }
     }
 
-    public void increase_autonInnerPortInput(View view) {
-        autonInnerPort += 1;
-        displayAutonInnerPortInput(autonInnerPort);
+    public void increase_autonHighHubInput(View view) {
+        autonHighHub += 1;
+        displayAutonHighHubInput(autonHighHub);
     }
 
-    private void displayAutonInnerPortInput(int number) {
-        autonInnerPortInput.setText("" + number);
+    private void displayAutonHighHubInput(int number) {
+        autonHighHubInput.setText("" + number);
     }
 
     //Auton Outer Power Cell Score
-    public void decrease_autonOuterPortInput(View view) {
-        if (autonOuterPort != 0) {
-            autonOuterPort -= 1;
-            displayAutonOuterPortInput(autonOuterPort);
+    public void decrease_autonLowHubInput(View view) {
+        if (autonLowHub != 0) {
+            autonLowHub -= 1;
+            displayAutonLowHubInput(autonLowHub);
         } else {
         }
     }
 
-    public void increase_autonOuterPortInput(View view) {
-        autonOuterPort += 1;
-        displayAutonOuterPortInput(autonOuterPort);
+    public void increase_autonLowHubInput(View view) {
+        autonLowHub += 1;
+        displayAutonLowHubInput(autonLowHub);
     }
 
-    private void displayAutonOuterPortInput(int number) {
-        autonOuterPortInput.setText("" + number);
+    private void displayAutonLowHubInput(int number) {
+        autonLowHubInput.setText("" + number);
     }
+//
+//    //Auton Bottom Power Cell Score
+//    public void decrease_autonBottomPortInput(View view) {
+//        if (autonBottomPort != 0) {
+//            autonBottomPort -= 1;
+//            displayAutonBottomPortInput(autonBottomPort);
+//        } else {
+//        }
+//    }
+//
+//    public void increase_autonBottomPortInput(View view) {
+//        autonBottomPort += 1;
+//        displayAutonBottomPortInput(autonBottomPort);
+//    }
 
-    //Auton Bottom Power Cell Score
-    public void decrease_autonBottomPortInput(View view) {
-        if (autonBottomPort != 0) {
-            autonBottomPort -= 1;
-            displayAutonBottomPortInput(autonBottomPort);
-        } else {
-        }
-    }
-
-    public void increase_autonBottomPortInput(View view) {
-        autonBottomPort += 1;
-        displayAutonBottomPortInput(autonBottomPort);
-    }
-
-    private void displayAutonBottomPortInput(int number) {
-        autonBottomPortInput.setText("" + number);
-    }
+//    private void displayAutonBottomPortInput(int number) {
+//        autonBottomPortInput.setText("" + number);
+//    }
 
     /*This method will look at all of the text/number input fields and set error
     *for validation of data entry
@@ -258,10 +261,11 @@ public class AutonActivity extends AppCompatActivity implements View.OnKeyListen
 
         autonDataStringList.add(getTextInputLayoutString(teamNumberInputLayout));
         autonDataStringList.add(getTextInputLayoutString(matchNumberInputLayout));
-        autonDataStringList.add(String.valueOf(initiationLinechkbx.isChecked()));
-        autonDataStringList.add(getTextInputLayoutString(autonInnerPortInputLayout));
-        autonDataStringList.add(getTextInputLayoutString(autonOuterPortInputLayout));
-        autonDataStringList.add(getTextInputLayoutString(autonBottomPortInputLayout));
+        autonDataStringList.add(String.valueOf(Taxichkbx.isChecked()));
+        autonDataStringList.add(String.valueOf(humanPlayershotchkbx.isChecked()));
+        autonDataStringList.add(getTextInputLayoutString(autonHighHubInputLayout));
+        autonDataStringList.add(getTextInputLayoutString(autonLowHubInputLayout));
+      //  autonDataStringList.add(getTextInputLayoutString(autonBottomPortInputLayout));
 
         final Intent intent = new Intent(this, TeleopActivity.class);
         intent.putExtra(AUTON_STRING_EXTRA, FormatStringUtils.addDelimiter(autonDataStringList, ","));
@@ -272,10 +276,11 @@ public class AutonActivity extends AppCompatActivity implements View.OnKeyListen
 
         teamNumberInputLayout.setError(null);
         matchNumberInputLayout.setError(null);
-        initiationLinechkbx.setError(null);
-        autonInnerPortInputLayout.setError(null);
-        autonOuterPortInputLayout.setError(null);
-        autonBottomPortInputLayout.setError(null);
+        Taxichkbx.setError(null);
+        humanPlayershotchkbx.setError(null);
+        autonHighHubInputLayout.setError(null);
+        autonLowHubInputLayout.setError(null);
+      //  autonBottomPortInputLayout.setError(null);
 
         matchNumberInput.requestFocus();
     }
@@ -302,14 +307,15 @@ public class AutonActivity extends AppCompatActivity implements View.OnKeyListen
     public void clearData() {
         teamNumberInput.setText("");
         matchNumberInput.setText("");
-        initiationLinechkbx.setChecked(false);
-        autonInnerPortInput.setText("0");
-        autonOuterPortInput.setText("0");
-        autonBottomPortInput.setText("0");
+        Taxichkbx.setChecked(false);
+        humanPlayershotchkbx.setChecked(false);
+        autonHighHubInput.setText("0");
+        autonLowHubInput.setText("0");
+       // autonBottomPortInput.setText("0");
 
-        autonInnerPort = 0;
-        autonOuterPort = 0;
-        autonBottomPort = 0;
+        autonHighHub = 0;
+        autonLowHub = 0;
+        //autonBottomPort = 0;
     }
 
 
