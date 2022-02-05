@@ -13,6 +13,7 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -39,52 +40,65 @@ import static com.example.vande.scouting2022.AutonActivity.AUTON_STRING_EXTRA;
 import static com.example.vande.scouting2022.AutonActivity.MATCH_STRING_EXTRA;
 import static com.example.vande.scouting2022.AutonActivity.TEAMNUMBER_STRING_EXTRA;
 
+import com.whygraphics.multilineradiogroup.MultiLineRadioGroup;
+
 
 public class TeleopActivity extends AppCompatActivity implements View.OnKeyListener {
     /*This area sets and binds all of the variables that we will use in the auton activity*/
 
-    @BindView(R.id.teleopInnerPort_input_layout)
-    public TextInputLayout teleopInnerPortInputLayout;
+    @BindView(R.id.DefenseTeam_input_layout)
+    public TextInputLayout DefenseTeaminputlayout;
 
-    @BindView(R.id.teleopOuterPort_input_layout)
-    public TextInputLayout teleopOuterPortInputLayout;
+    @BindView(R.id.DefenseTeam_input)
+    public TextInputEditText DefenseTeaminput;
 
-    @BindView(R.id.teleopBottomPort_input_layout)
-    public TextInputLayout teleopBottomPortInputLayout;
+    @BindView(R.id.teleopHighHub_input_layout)
+    public TextInputLayout teleopHighHubinputlayout;
 
-    @BindView(R.id.teleopInnerPort_input)
-    public TextInputEditText teleopInnerPortInput;
+    @BindView(R.id.teleopLowHub_input_layout)
+    public TextInputLayout teleopLowHubinputlayout;
 
-    @BindView(R.id.teleopOuterPort_input)
-    public TextInputEditText teleopOuterPortInput;
+   // @BindView(R.id.teleopBottomPort_input_layout)
+   // public TextInputLayout teleopBottomPortInputLayout;
 
-    @BindView(R.id.teleopBottomPort_input)
-    public TextInputEditText teleopBottomPortInput;
+    @BindView(R.id.HighHubPort_input)
+    public TextInputEditText HighHubPortinput;
 
-    @BindView(R.id.powerCellPickupLoadingStation_checkBox)
-    public CheckBox powerCellPickupLoadingStationCheckBox;
+    @BindView(R.id.teleopLowHub_input)
+    public TextInputEditText teleopLowHub_input;
 
-    @BindView(R.id.powerCellPickupFloor_checkBox)
-    public CheckBox powerCellPickupFloorCheckBox;
+  //  @BindView(R.id.teleopBottomPort_input)
+  //  public TextInputEditText teleopBottomPortInput;
+
+    @BindView(R.id.Fixed_checkBox)
+    public CheckBox FixedcheckBox;
+
+    @BindView(R.id.Variable_checkBox)
+    public CheckBox VariablecheckBox;
 
     @BindView(R.id.fouls_checkBox)
     public CheckBox foulsCheckBox;
 
-    @BindView(R.id.controlPanel_RadiobtnGrp)
-    public RadioGroup controlPanelRadiobtnGrp;
+   @BindView(R.id.climberRung_RadiobtnGrp)
+   public RadioGroup climberRungRadiobtnGrp;
 
-    @BindView(R.id.climb_RadiobtnGrp)
-    public RadioGroup climbRadiobtnGrp;
+    @BindView(R.id.speed_RadiobtnGrp)
+    public RadioGroup speedRadiobtnGrp;
+
+   // @BindView(R.id.climberRung_RadiobtnGrp)
+  //  public RadioGroup climberRungRadiobtnGrp;
 
     @BindView(R.id.defense_RadiobtnGrp)
     public RadioGroup defenseRadiobtnGrp;
 
+    @BindView(R.id.speedofrobotClimbingnGrp)
+    public RadioGroup speedclimbRadiobtnGrp;
+
     @BindView(R.id.save_btn)
     public Button saveBtn;
 
-    int teleopInnerPort = 0;
-    int teleopOuterPort = 0;
-    int teleopBottomPort = 0;
+    int teleopHighHub = 0;
+    int teleopLowHub = 0;
     public String auton;
     public String matchNumber;
     public String teamNumber;
@@ -111,9 +125,9 @@ public class TeleopActivity extends AppCompatActivity implements View.OnKeyListe
 
         teleopDataStringList = new ArrayList<>();
 
-        displayTeleopInnerPortInput(teleopInnerPort);
-        displayTeleopOuterPortInput(teleopOuterPort);
-        displayTeleopBottomPortInput(teleopBottomPort);
+        displayHighHubInput(teleopHighHub);
+        displayLowHubInput(teleopLowHub);
+//        displayDefenseTeamInput(DefenseTeam_input);
     }
 
     /*If this activity is resumed from a paused state the data
@@ -123,9 +137,10 @@ public class TeleopActivity extends AppCompatActivity implements View.OnKeyListe
     protected void onResume() {
         super.onResume();
 
-        teleopInnerPortInput.setOnKeyListener(this);
-        teleopOuterPortInput.setOnKeyListener(this);
-        teleopBottomPortInput.setOnKeyListener(this);
+        HighHubPortinput.setOnKeyListener(this);
+        teleopLowHub_input.setOnKeyListener(this);
+        DefenseTeaminput.setOnKeyListener(this);
+       // teleopBottomPortInput.setOnKeyListener(this);
     }
 
     /*If this activity enters a paused state the data will be set to null*/
@@ -133,9 +148,10 @@ public class TeleopActivity extends AppCompatActivity implements View.OnKeyListe
     protected void onPause() {
         super.onPause();
 
-        teleopInnerPortInput.setOnKeyListener(null);
-        teleopOuterPortInput.setOnKeyListener(null);
-        teleopBottomPortInput.setOnKeyListener(null);
+        HighHubPortinput.setOnKeyListener(null);
+        teleopLowHub_input.setOnKeyListener(null);
+        DefenseTeaminput.setOnKeyListener(null);
+       // teleopBottomPortInput.setOnKeyListener(null);
     }
 
     /* This method will display the options menu when the icon is pressed
@@ -165,60 +181,41 @@ public class TeleopActivity extends AppCompatActivity implements View.OnKeyListe
     }
 
     //Teleop Inner Power Cell Score
-    public void decrease_teleopInnerPortInput(View view) {
-        if (teleopInnerPort != 0) {
-            teleopInnerPort -= 1;
-            displayTeleopInnerPortInput(teleopInnerPort);
+    public void decrease_HighHubInput(View view) {
+        if (teleopHighHub != 0) {
+            teleopHighHub -= 1;
+            displayHighHubInput(teleopHighHub);
         } else {
         }
     }
 
-    public void increase_teleopInnerPortInput(View view) {
-        teleopInnerPort += 1;
-        displayTeleopInnerPortInput(teleopInnerPort);
+    public void increase_HighHubInput(View view) {
+        teleopHighHub += 1;
+        displayHighHubInput(teleopHighHub);
     }
 
-    private void displayTeleopInnerPortInput(int number) {
-        teleopInnerPortInput.setText("" + number);
+    private void displayHighHubInput(int number) {
+        HighHubPortinput.setText("" + number);
     }
 
     //Teleop outer power cell score
-    public void decreaseTeleopOuterPortInput(View view) {
-        if (teleopOuterPort != 0) {
-            teleopOuterPort -= 1;
-            displayTeleopOuterPortInput(teleopOuterPort);
+    public void decreaseTeleopLowHubInput(View view) {
+        if (teleopLowHub != 0) {
+            teleopLowHub -= 1;
+            displayLowHubInput(teleopLowHub);
         } else {
         }
     }
 
-    public void increaseTeleopOuterPortInput(View view) {
-        teleopOuterPort += 1;
-        displayTeleopOuterPortInput(teleopOuterPort);
+    public void increaseTeleopLowHubInput(View view) {
+        teleopLowHub += 1;
+        displayLowHubInput(teleopLowHub);
 
     }
 
 
-    private void displayTeleopOuterPortInput(int number) {
-        teleopOuterPortInput.setText("" + number);
-    }
-
-    //Teleop bottom power cell score
-    public void decreaseTeleopBottomPortInput(View view) {
-        if (teleopBottomPort != 0) {
-            teleopBottomPort -= 1;
-            displayTeleopBottomPortInput(teleopBottomPort);
-        } else {
-        }
-    }
-
-    public void increaseTeleopBottomPortInput(View view) {
-        teleopBottomPort += 1;
-        displayTeleopBottomPortInput(teleopBottomPort);
-
-    }
-
-    private void displayTeleopBottomPortInput(int number) {
-        teleopBottomPortInput.setText("" + number);
+    private void displayLowHubInput(int number) {
+        teleopLowHub_input.setText("" + number);
     }
 
 
@@ -234,17 +231,18 @@ public class TeleopActivity extends AppCompatActivity implements View.OnKeyListe
 
                 switch (inputEditText.getId()) {
 
-                    case R.id.teleopInnerPort_input:
-                        teleopInnerPortInputLayout.setError(null);
+                    case R.id.HighHubPort_input:
+                        teleopHighHubinputlayout.setError(null);
                         break;
 
-                    case R.id.teleopOuterPort_input:
-                        teleopOuterPortInputLayout.setError(null);
+                    case R.id.teleopLowHub_input:
+                        teleopLowHubinputlayout.setError(null);
                         break;
 
-                    case R.id.teleopBottomPort_input:
-                        teleopBottomPortInputLayout.setError(null);
+                    case R.id.DefenseTeam_input:
+                        DefenseTeaminputlayout.setError(null);
                         break;
+
                 }
             }
         }
@@ -264,32 +262,34 @@ public class TeleopActivity extends AppCompatActivity implements View.OnKeyListe
         String state = Environment.getExternalStorageState();
         boolean allInputsPassed = false;
 
-        if (StringUtils.isEmptyOrNull(getTextInputLayoutString(teleopInnerPortInputLayout))) {
-            teleopInnerPortInputLayout.setError(getText(R.string.teleopInnerPowerCellError));
-            ViewUtils.requestFocus(teleopInnerPortInputLayout, this);
-        } else if (StringUtils.isEmptyOrNull(getTextInputLayoutString(teleopOuterPortInputLayout))) {
-            teleopOuterPortInputLayout.setError(getText(R.string.teleopOuterPowerCellError));
-            ViewUtils.requestFocus(teleopOuterPortInputLayout, this);
-        } else if (StringUtils.isEmptyOrNull(getTextInputLayoutString(teleopBottomPortInputLayout))) {
-            teleopBottomPortInputLayout.setError(getText(R.string.teleopBottomPowerCellError));
-            ViewUtils.requestFocus(teleopBottomPortInputLayout, this);
-        } else if (controlPanelRadiobtnGrp.getCheckedRadioButtonId() == -1) {
-            ViewUtils.requestFocus(controlPanelRadiobtnGrp, this);
-        } else if (climbRadiobtnGrp.getCheckedRadioButtonId() == -1) {
-            ViewUtils.requestFocus(climbRadiobtnGrp, this);
-        } else if (defenseRadiobtnGrp.getCheckedRadioButtonId() == -1) {
-            ViewUtils.requestFocus(defenseRadiobtnGrp, this);
-        } else {
-            allInputsPassed = true;
-        }
-        if (!allInputsPassed) {
-            return;
-        }
+//        if (StringUtils.isEmptyOrNull(getTextInputLayoutString(teleopHighHubinputlayout))) {
+//            teleopHighHubinputlayout.setError(getText(R.string.teleopInnerPowerCellError));
+//            ViewUtils.requestFocus(teleopHighHubinputlayout, this);
+//        } else if (StringUtils.isEmptyOrNull(getTextInputLayoutString(teleopLowHubinputlayout))) {
+//            teleopLowHubinputlayout.setError(getText(R.string.teleopOuterPowerCellError));
+//            ViewUtils.requestFocus(teleopLowHubinputlayout, this);
+//        } else if (StringUtils.isEmptyOrNull(getTextInputLayoutString(DefenseTeaminputlayout))) {
+//            DefenseTeaminputlayout.setError(getText(R.string.teleopBottomPowerCellError));
+//           ViewUtils.requestFocus(DefenseTeaminputlayout, this);
+//       } else if (speedclimbRadiobtnGrp.getCheckedRadioButtonId() == -1) {
+//            ViewUtils.requestFocus(speedclimbRadiobtnGrp, this);
+//
+//        } else if (climberRungRadiobtnGrp.getCheckedRadioButtonId() == -1) {
+//            ViewUtils.requestFocus(climberRungRadiobtnGrp, this);
+//        } else if (defenseRadiobtnGrp.getCheckedRadioButtonId() == -1) {
+//            ViewUtils.requestFocus(defenseRadiobtnGrp, this);
+//        } else {
+//            allInputsPassed = true;
+//        }
+//        if (!allInputsPassed) {
+//            return;
+//        }
 
-        final String powerCellPickup = (powerCellPickupLoadingStationCheckBox.isChecked() ? "Loading Station" : "") +
-                                    (powerCellPickupFloorCheckBox.isChecked() ? " Floor" : "");
-        final RadioButton climb_Radiobtn = findViewById(climbRadiobtnGrp.getCheckedRadioButtonId());
-        final RadioButton controlPanel_Radiobtn = findViewById(controlPanelRadiobtnGrp.getCheckedRadioButtonId());
+        final String powerCellPickup = (FixedcheckBox.isChecked() ? "Loading Station" : "") +
+                                    (VariablecheckBox.isChecked() ? " Floor" : "");
+//        final MultiLineRadioGroup climb_Radiobtn = (MultiLineRadioGroup) findViewById(climberRungRadiobtnGrp.getCheckedRadioButtonId());
+        final RadioButton climb_Radiobtn = (RadioButton) findViewById(climberRungRadiobtnGrp.getCheckedRadioButtonId());
+       final RadioButton speed_climbRadiobtn = findViewById(speedclimbRadiobtnGrp.getCheckedRadioButtonId());
         final RadioButton defense_Radiobtn = findViewById(defenseRadiobtnGrp.getCheckedRadioButtonId());
 
         if(PermissionUtils.getPermissions(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
@@ -299,16 +299,27 @@ public class TeleopActivity extends AppCompatActivity implements View.OnKeyListe
 
                 File file = new File(dir, "Match" + Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID) + ".csv");
 
-                teleopDataStringList.add(getTextInputLayoutString(teleopInnerPortInputLayout));
-                teleopDataStringList.add(getTextInputLayoutString(teleopOuterPortInputLayout));
-                teleopDataStringList.add(getTextInputLayoutString(teleopBottomPortInputLayout));
+                teleopDataStringList.add(getTextInputLayoutString(teleopHighHubinputlayout));
+                teleopDataStringList.add(getTextInputLayoutString(teleopLowHubinputlayout));
+                teleopDataStringList.add(getTextInputLayoutString(DefenseTeaminputlayout));
 
-                if(!powerCellPickupFloorCheckBox.isChecked() && !powerCellPickupLoadingStationCheckBox.isChecked()){
+                if(!VariablecheckBox.isChecked() && !FixedcheckBox.isChecked()){
                     teleopDataStringList.add("None");
                 } else {
                     teleopDataStringList.add(powerCellPickup);
                 }
-                teleopDataStringList.add(controlPanel_Radiobtn.getText());
+//
+//                climb_Radiobtn.setOnCheckedChangeListener(new MultiLineRadioGroup.OnCheckedChangeListener() {
+//                    @Override
+//                    public void onCheckedChanged(ViewGroup group, RadioButton button) {
+//                        Toast.makeText(TeleopActivity.this,
+//                                button.getText() + " was clicked",
+//                                Toast.LENGTH_SHORT).show();
+//                    }
+//                });
+
+
+                teleopDataStringList.add(speed_climbRadiobtn.getText());
                 teleopDataStringList.add(climb_Radiobtn.getText());
                 teleopDataStringList.add(defense_Radiobtn.getText());
 
@@ -351,24 +362,24 @@ public class TeleopActivity extends AppCompatActivity implements View.OnKeyListe
             finish();
         }
 
-        teleopInnerPortInputLayout.setError(null);
-        teleopOuterPortInputLayout.setError(null);
-        teleopBottomPortInputLayout.setError(null);
+        teleopHighHubinputlayout.setError(null);
+        teleopLowHubinputlayout.setError(null);
+        DefenseTeaminputlayout.setError(null);
     }
 
     /*The method will clear all the data in the text fields, checkboxes, and
     * set radio buttons to default*/
     public void clearData(View view) {
-        teleopInnerPortInput.setText("" + teleopInnerPort);
-        teleopOuterPortInput.setText("" + teleopOuterPort);
-        teleopBottomPortInput.setText("" + teleopBottomPort);
+        HighHubPortinput.setText("" + teleopHighHub);
+        teleopLowHub_input.setText("" + teleopLowHub);
+        DefenseTeaminput.setText("");
 
-        powerCellPickupFloorCheckBox.setChecked(false);
-        powerCellPickupLoadingStationCheckBox.setChecked(false);
+        VariablecheckBox.setChecked(false);
+        FixedcheckBox.setChecked(false);
         foulsCheckBox.setChecked(false);
 
-        controlPanelRadiobtnGrp.clearCheck();
-        climbRadiobtnGrp.clearCheck();
+        speedclimbRadiobtnGrp.clearCheck();
+        climberRungRadiobtnGrp.clearCheck();
         defenseRadiobtnGrp.clearCheck();
     }
 

@@ -13,28 +13,28 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/decrease_teleopInnerPort"
+            android:id="@+id/decrease_teleopHighHub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="decrease_teleopInnerPortInput"
+            android:onClick="decrease_HighHubInput"
             android:text="-"
             app:layout_constraintTop_toBottomOf="parent"
             app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintStart_toStartOf="parent" />
 
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/teleopInnerPort_input_layout"
+            android:id="@+id/teleopHighHub_input_layout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="@string/teleopInnerPowerCellsScored"
+            android:hint="@string/teleopHighHub"
             app:errorEnabled="true"
-            app:layout_constraintEnd_toStartOf="@+id/increase_teleopInnerPort"
-            app:layout_constraintStart_toEndOf="@id/decrease_teleopInnerPort"
+            app:layout_constraintEnd_toStartOf="@+id/increase_teleopHighHub"
+            app:layout_constraintStart_toEndOf="@id/decrease_teleopHighHub"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="UnknownId">
 
             <android.support.design.widget.TextInputEditText
-                android:id="@+id/teleopInnerPort_input"
+                android:id="@+id/HighHubPort_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -50,38 +50,38 @@
         </android.support.design.widget.TextInputLayout>
 
         <Button
-            android:id="@+id/increase_teleopInnerPort"
+            android:id="@+id/increase_teleopHighHub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="increase_teleopInnerPortInput"
+            android:onClick="increase_HighHubInput"
             android:text="+"
             app:layout_constraintTop_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/teleopInnerPort_input_layout" />
+            app:layout_constraintStart_toEndOf="@id/teleopHighHub_input_layout" />
 
         <Button
-            android:id="@+id/decrease_teleopOuterPort"
+            android:id="@+id/decrease_teleopLowHub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="decreaseTeleopOuterPortInput"
+            android:onClick="decreaseTeleopLowHubInput"
             android:text="-"
-            app:layout_constraintTop_toBottomOf="@id/decrease_teleopInnerPort"
-            app:layout_constraintEnd_toStartOf="@+id/teleopOuterPort_input_layout"
+            app:layout_constraintTop_toBottomOf="@id/decrease_teleopHighHub"
+            app:layout_constraintEnd_toStartOf="@+id/teleopLowHub_input_layout"
             app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintStart_toStartOf="parent" />
 
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/teleopOuterPort_input_layout"
+            android:id="@+id/teleopLowHub_input_layout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="@string/teleopOuterPowerCellsScored"
+            android:hint="@string/teleopLowHub"
             app:errorEnabled="true"
-            app:layout_constraintTop_toBottomOf="@id/decrease_teleopInnerPort"
-            app:layout_constraintEnd_toStartOf="@+id/increase_teleopOuterPort"
-            app:layout_constraintStart_toEndOf="@+id/decrease_teleopOuterPort">
+            app:layout_constraintTop_toBottomOf="@id/decrease_teleopHighHub"
+            app:layout_constraintEnd_toStartOf="@+id/increase_teleopLowHub"
+            app:layout_constraintStart_toEndOf="@+id/decrease_teleopLowHub">
 
             <android.support.design.widget.TextInputEditText
-                android:id="@+id/teleopOuterPort_input"
+                android:id="@+id/teleopLowHub_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -96,173 +96,89 @@
         </android.support.design.widget.TextInputLayout>
 
         <Button
-            android:id="@+id/increase_teleopOuterPort"
+            android:id="@+id/increase_teleopLowHub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="increaseTeleopOuterPortInput"
+            android:onClick="increaseTeleopLowHubInput"
             android:text="+"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/decrease_teleopInnerPort"
-            app:layout_constraintStart_toEndOf="@+id/teleopOuterPort_input_layout" />
-
-
-        <Button
-            android:id="@+id/decrease_teleopBottomPort"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="decreaseTeleopBottomPortInput"
-            android:text="-"
-            app:layout_constraintTop_toBottomOf="@+id/decrease_teleopOuterPort"
-            app:layout_constraintEnd_toStartOf="@+id/teleopBottomPort_input_layout"
-            app:layout_constraintHorizontal_chainStyle="spread_inside"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/teleopBottomPort_input_layout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:hint="@string/teleopBottomPowerCellsScored"
-            app:errorEnabled="true"
-            app:layout_constraintTop_toBottomOf="@+id/decrease_teleopOuterPort"
-            app:layout_constraintEnd_toStartOf="@+id/increase_teleopBottomPort"
-            app:layout_constraintStart_toEndOf="@+id/decrease_teleopBottomPort">
-
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/teleopBottomPort_input"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:clickable="false"
-                android:cursorVisible="false"
-                android:focusable="false"
-                android:focusableInTouchMode="false"
-                android:inputType="number"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="parent" />
-        </android.support.design.widget.TextInputLayout>
-
-        <Button
-            android:id="@+id/increase_teleopBottomPort"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="increaseTeleopBottomPortInput"
-            android:text="+"
-            app:layout_constraintTop_toBottomOf="@id/decrease_teleopOuterPort"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/teleopBottomPort_input_layout" />
-
+            app:layout_constraintTop_toBottomOf="@id/decrease_teleopHighHub"
+            app:layout_constraintStart_toEndOf="@+id/teleopLowHub_input_layout" />
 
 
         <TextView
-            android:id="@+id/powerCellPickup_textView"
+            android:id="@+id/ShotLocation_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/powerCellPickup"
+            android:text="@string/ShotLocation"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/teleopBottomPort_input_layout" />
+            app:layout_constraintTop_toBottomOf="@+id/teleopLowHub_input_layout" />
 
         <LinearLayout
-            android:id="@+id/powerCellPickup_layout"
+            android:id="@+id/ShotLocation_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/powerCellPickup_textView">
+            app:layout_constraintTop_toBottomOf="@id/ShotLocation_textView">
 
             <CheckBox
-                android:id="@+id/powerCellPickupLoadingStation_checkBox"
+                android:id="@+id/Fixed_checkBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/powerCellPickupLoadingStation" />
+                android:text="@string/Fixed" />
 
             <CheckBox
-                android:id="@+id/powerCellPickupFloor_checkBox"
+                android:id="@+id/Variable_checkBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/powerCellPickupFloor" />
+                android:text="@string/Variable" />
 
         </LinearLayout>
 
+
         <TextView
-            android:id="@+id/controlPanel_textView"
+            android:id="@+id/speed_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/controlPanelHeading"
+            android:text="@string/speedHeading"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/powerCellPickup_layout" />
+            app:layout_constraintTop_toBottomOf="@+id/ShotLocation_layout" />
 
         <RadioGroup
-            android:id="@+id/controlPanel_RadiobtnGrp"
+            android:id="@+id/speed_RadiobtnGrp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/controlPanel_textView">
+            app:layout_constraintTop_toBottomOf="@+id/speed_textView">
 
             <RadioButton
-                android:id="@+id/controlPanelStage2_btn"
+                android:id="@+id/notMoving_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/controlPanelStage2" />
+                android:text="@string/notMoving" />
 
             <RadioButton
-                android:id="@+id/controlPanelStage3_btn"
+                android:id="@+id/slow_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/controlPanelStage3" />
+                android:text="@string/slow" />
 
             <RadioButton
-                android:id="@+id/controlPanelNotAttempted_btn"
+                android:id="@+id/medium_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/controlPanelNotAttempted" />
-        </RadioGroup>
-
-        <TextView
-            android:id="@+id/climb_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/climbingHeading"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/controlPanel_RadiobtnGrp" />
-
-        <RadioGroup
-            android:id="@+id/climb_RadiobtnGrp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/climb_textView">
+                android:text="@string/medium" />
 
             <RadioButton
-                android:id="@+id/ableToClimb_btn"
+                android:id="@+id/fast_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/successClimb" />
-
-            <RadioButton
-                android:id="@+id/unableToClimb_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/failClimb" />
-
-            <RadioButton
-                android:id="@+id/parkClimb_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/parkClimb" />
-
-            <RadioButton
-                android:id="@+id/notAttemptedClimb_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/noClimb" />
+                android:text="@string/fast" />
         </RadioGroup>
 
         <TextView
@@ -272,7 +188,7 @@
             android:text="@string/defenseHeading"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/climb_RadiobtnGrp" />
+            app:layout_constraintTop_toBottomOf="@+id/speed_RadiobtnGrp" />
 
         <RadioGroup
             android:id="@+id/defense_RadiobtnGrp"
@@ -306,6 +222,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/noDefense" />
+
         </RadioGroup>
 
         <TextView
@@ -325,16 +242,153 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/fouls_TextView" />
 
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/DefenseTeam_input_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="18dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginStart="18dp"
+            android:hint="@string/defenseTeamHeading"
+            app:errorEnabled="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fouls_checkBox">
+
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/DefenseTeam_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="5"
+            android:inputType="number"
+            android:textSize="16sp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/climbLevel_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/climbLevel"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/DefenseTeam_input_layout" />
+
+        <RadioGroup
+            android:id="@+id/climberRung_RadiobtnGrp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/climbLevel_textView">
+<!--            <TableLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:stretchColumns="100">-->
+
+<!--                <TableRow>-->
+            <RadioButton
+                android:id="@+id/lowRung_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/lowRung" />
+
+                    <RadioButton
+                        android:id="@+id/midRung_btn"
+                        android:layout_width="121dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/midRung" />
+
+                    <RadioButton
+                        android:id="@+id/highRung_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/highRung" />
+<!--                </TableRow>-->
+
+<!--                <TableRow android:layout_width="270dp">-->
+
+                    <RadioButton
+                        android:id="@+id/traversalRung_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/traversalRung" />
+
+                    <RadioButton
+                        android:id="@+id/notAttempted_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/noDefense" />
+
+                    <RadioButton
+                        android:id="@+id/failed_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/failed" />
+<!--                </TableRow>-->
+<!--            </TableLayout>-->
+
+        </RadioGroup>
+        <TextView
+            android:id="@+id/speed_climb_RadiobtnGrp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/speed_climbheading"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/climberRung_RadiobtnGrp" />
+
+        <RadioGroup
+            android:id="@+id/speedofrobotClimbingnGrp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/speed_climb_RadiobtnGrp">
+
+            <RadioButton
+                android:id="@+id/notMovingClimb_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/notMoving" />
+
+            <RadioButton
+                android:id="@+id/slowClimb_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/slow" />
+
+            <RadioButton
+                android:id="@+id/mediumClimb_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/medium" />
+
+            <RadioButton
+                android:id="@+id/fastClimb_btn"
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                android:text="@string/fast" />
+        </RadioGroup>
+
         <Button
             android:id="@+id/save_btn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:onClick="saveData"
             android:text="@string/saveButton"
+            app:layout_constraintTop_toBottomOf="@+id/speedofrobotClimbingnGrp"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            app:layout_constraintRight_toRightOf="parent" />
+
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
 

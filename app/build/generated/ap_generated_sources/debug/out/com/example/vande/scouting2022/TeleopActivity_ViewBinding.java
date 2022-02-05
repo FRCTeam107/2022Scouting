@@ -26,18 +26,19 @@ public class TeleopActivity_ViewBinding implements Unbinder {
   public TeleopActivity_ViewBinding(TeleopActivity target, View source) {
     this.target = target;
 
-    target.teleopInnerPortInputLayout = Utils.findRequiredViewAsType(source, R.id.teleopInnerPort_input_layout, "field 'teleopInnerPortInputLayout'", TextInputLayout.class);
-    target.teleopOuterPortInputLayout = Utils.findRequiredViewAsType(source, R.id.teleopOuterPort_input_layout, "field 'teleopOuterPortInputLayout'", TextInputLayout.class);
-    target.teleopBottomPortInputLayout = Utils.findRequiredViewAsType(source, R.id.teleopBottomPort_input_layout, "field 'teleopBottomPortInputLayout'", TextInputLayout.class);
-    target.teleopInnerPortInput = Utils.findRequiredViewAsType(source, R.id.teleopInnerPort_input, "field 'teleopInnerPortInput'", TextInputEditText.class);
-    target.teleopOuterPortInput = Utils.findRequiredViewAsType(source, R.id.teleopOuterPort_input, "field 'teleopOuterPortInput'", TextInputEditText.class);
-    target.teleopBottomPortInput = Utils.findRequiredViewAsType(source, R.id.teleopBottomPort_input, "field 'teleopBottomPortInput'", TextInputEditText.class);
-    target.powerCellPickupLoadingStationCheckBox = Utils.findRequiredViewAsType(source, R.id.powerCellPickupLoadingStation_checkBox, "field 'powerCellPickupLoadingStationCheckBox'", CheckBox.class);
-    target.powerCellPickupFloorCheckBox = Utils.findRequiredViewAsType(source, R.id.powerCellPickupFloor_checkBox, "field 'powerCellPickupFloorCheckBox'", CheckBox.class);
+    target.DefenseTeaminputlayout = Utils.findRequiredViewAsType(source, R.id.DefenseTeam_input_layout, "field 'DefenseTeaminputlayout'", TextInputLayout.class);
+    target.DefenseTeaminput = Utils.findRequiredViewAsType(source, R.id.DefenseTeam_input, "field 'DefenseTeaminput'", TextInputEditText.class);
+    target.teleopHighHubinputlayout = Utils.findRequiredViewAsType(source, R.id.teleopHighHub_input_layout, "field 'teleopHighHubinputlayout'", TextInputLayout.class);
+    target.teleopLowHubinputlayout = Utils.findRequiredViewAsType(source, R.id.teleopLowHub_input_layout, "field 'teleopLowHubinputlayout'", TextInputLayout.class);
+    target.HighHubPortinput = Utils.findRequiredViewAsType(source, R.id.HighHubPort_input, "field 'HighHubPortinput'", TextInputEditText.class);
+    target.teleopLowHub_input = Utils.findRequiredViewAsType(source, R.id.teleopLowHub_input, "field 'teleopLowHub_input'", TextInputEditText.class);
+    target.FixedcheckBox = Utils.findRequiredViewAsType(source, R.id.Fixed_checkBox, "field 'FixedcheckBox'", CheckBox.class);
+    target.VariablecheckBox = Utils.findRequiredViewAsType(source, R.id.Variable_checkBox, "field 'VariablecheckBox'", CheckBox.class);
     target.foulsCheckBox = Utils.findRequiredViewAsType(source, R.id.fouls_checkBox, "field 'foulsCheckBox'", CheckBox.class);
-    target.controlPanelRadiobtnGrp = Utils.findRequiredViewAsType(source, R.id.controlPanel_RadiobtnGrp, "field 'controlPanelRadiobtnGrp'", RadioGroup.class);
-    target.climbRadiobtnGrp = Utils.findRequiredViewAsType(source, R.id.climb_RadiobtnGrp, "field 'climbRadiobtnGrp'", RadioGroup.class);
+    target.climberRungRadiobtnGrp = Utils.findRequiredViewAsType(source, R.id.climberRung_RadiobtnGrp, "field 'climberRungRadiobtnGrp'", RadioGroup.class);
+    target.speedRadiobtnGrp = Utils.findRequiredViewAsType(source, R.id.speed_RadiobtnGrp, "field 'speedRadiobtnGrp'", RadioGroup.class);
     target.defenseRadiobtnGrp = Utils.findRequiredViewAsType(source, R.id.defense_RadiobtnGrp, "field 'defenseRadiobtnGrp'", RadioGroup.class);
+    target.speedclimbRadiobtnGrp = Utils.findRequiredViewAsType(source, R.id.speedofrobotClimbingnGrp, "field 'speedclimbRadiobtnGrp'", RadioGroup.class);
     target.saveBtn = Utils.findRequiredViewAsType(source, R.id.save_btn, "field 'saveBtn'", Button.class);
   }
 
@@ -48,18 +49,19 @@ public class TeleopActivity_ViewBinding implements Unbinder {
     if (target == null) throw new IllegalStateException("Bindings already cleared.");
     this.target = null;
 
-    target.teleopInnerPortInputLayout = null;
-    target.teleopOuterPortInputLayout = null;
-    target.teleopBottomPortInputLayout = null;
-    target.teleopInnerPortInput = null;
-    target.teleopOuterPortInput = null;
-    target.teleopBottomPortInput = null;
-    target.powerCellPickupLoadingStationCheckBox = null;
-    target.powerCellPickupFloorCheckBox = null;
+    target.DefenseTeaminputlayout = null;
+    target.DefenseTeaminput = null;
+    target.teleopHighHubinputlayout = null;
+    target.teleopLowHubinputlayout = null;
+    target.HighHubPortinput = null;
+    target.teleopLowHub_input = null;
+    target.FixedcheckBox = null;
+    target.VariablecheckBox = null;
     target.foulsCheckBox = null;
-    target.controlPanelRadiobtnGrp = null;
-    target.climbRadiobtnGrp = null;
+    target.climberRungRadiobtnGrp = null;
+    target.speedRadiobtnGrp = null;
     target.defenseRadiobtnGrp = null;
+    target.speedclimbRadiobtnGrp = null;
     target.saveBtn = null;
   }
 }

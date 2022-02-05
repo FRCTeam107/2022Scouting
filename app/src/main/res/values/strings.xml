@@ -54,24 +54,24 @@
     <string name="autonBottomPortError">Enter # for Bottom Port</string>
 
     <!--Teleop Strings-->
-    <string name="teleopInnerPowerCellsScored"># of inner power cells </string>
-    <string name="teleopOuterPowerCellsScored"># of outer power cells </string>
+    <string name="teleopHighHub"># of balls in high hub </string>
+    <string name="teleopLowHub"># of balls in low hub </string>
     <string name="teleopBottomPowerCellsScored"># of bottom power cells </string>
 
-    <string name="powerCellPickup">Power cell pickup</string>
-    <string name="powerCellPickupLoadingStation">Loading Station</string>
-    <string name="powerCellPickupFloor">Floor</string>
+    <string name="ShotLocation">Shot Location</string>
+    <string name="Fixed">Fixed</string>
+    <string name="Variable">Variable</string>
 
     <string name="controlPanelHeading">Control Panel</string>
     <string name="controlPanelStage2">Stage 2</string>
     <string name="controlPanelStage3">Stage 3</string>
     <string name="controlPanelNotAttempted">N/A</string>
 
-    <string name="climbingHeading">Climb</string>
-    <string name="successClimb">Success</string>
-    <string name="failClimb">Fail</string>
-    <string name="parkClimb">Park</string>
-    <string name="noClimb">N/A</string>
+    <string name="speedHeading">Speed of robot</string>
+    <string name="notMoving">Did not move</string>
+    <string name="slow">Slow</string>
+    <string name="medium">Medium</string>
+    <string name="fast">Fast</string>
 
     <string name="climbTimeHeading">Climb Time</string>
 
@@ -85,6 +85,8 @@
     <string name="nextButton">Move To Teleop</string>
 
     <string name="scouterInitials">Scouter Initials</string>
+
+    <string name="defenseTeamHeading"># of defensive team</string>
 
 
     <!--Teleop Error Strings-->
@@ -139,5 +141,11 @@
     <string name="pitPowerCellBottomError">Enter average bottom power cell number</string>
     <string name="pitWeightError">Enter robot weight</string>
     <string name="pitStormTrooperShotsError">Enter # of Storm Trooper shots</string>
-
+    <string name="climbLevel">Climb level</string>
+    <string name="lowRung">Low rung</string>
+    <string name="midRung">Mid rung</string>
+    <string name="highRung">High rung</string>
+    <string name="failed">Failed</string>
+    <string name="traversalRung">Traversal rung</string>
+    <string name="speed_climbheading">Speed of robot climb</string>
 </resources>
