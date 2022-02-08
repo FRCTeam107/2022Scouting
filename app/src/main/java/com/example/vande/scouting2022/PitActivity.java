@@ -50,10 +50,16 @@ public class PitActivity extends AppCompatActivity implements View.OnKeyListener
     @BindView(R.id.pit_teamNumber_input_layout)
     public TextInputLayout pitTeamNumberInputLayout;
 
+    @BindView(R.id.pit_size_input_layout)
+    public TextInputLayout pitSizeInputLayout;
+
+    @BindView(R.id.pit_size_input)
+    public TextInputEditText pitSizeInput;
+
     @BindView(R.id.pit_powerCellTop_input_layout)
     public TextInputLayout pitPowerCellTopInputLayout;
 
-    @BindView(R.id.pit_powerCellBottom_input_layout)
+    @BindView(R.id.pit_cargoBottominput_layout)
     public TextInputLayout pitPowerCellBottomInputLayout;
 
     @BindView(R.id.pit_weight_input_layout)
@@ -68,7 +74,7 @@ public class PitActivity extends AppCompatActivity implements View.OnKeyListener
     @BindView(R.id.pit_teamNumber_input)
     public TextInputEditText pitTeamNumberInput;
 
-    @BindView(R.id.pit_powerCellTop_input)
+    @BindView(R.id.PitCargoTop_input)
     public TextInputEditText pitPowerCellTopInput;
 
     @BindView(R.id.pit_powerCellBottom_input)
@@ -89,7 +95,7 @@ public class PitActivity extends AppCompatActivity implements View.OnKeyListener
     @BindView(R.id.pit_climbBoolean_RadiobtnGrp)
     public RadioGroup pitClimbBooleanRadiobtnGrp;
 
-    @BindView(R.id.pit_controlPanel_RadiobtnGrp)
+    @BindView(R.id.pit_climbLevel_RadiobtnGrp)
     public RadioGroup pitControlPanelRadioGrp;
 
     @BindView(R.id.pit_programmingLanguage_RadiobtnGrp)
@@ -144,6 +150,8 @@ public class PitActivity extends AppCompatActivity implements View.OnKeyListener
         pitWeightInputLayout.setOnKeyListener(this);
         pitStormTrooperShotsInputLayout.setOnKeyListener(this);
         pitCommentInputLayout.setOnKeyListener(this);
+        pitCommentInputLayout.setOnKeyListener(this);
+        pitSizeInputLayout.setOnKeyListener(this);
     }
 
 
@@ -157,6 +165,8 @@ public class PitActivity extends AppCompatActivity implements View.OnKeyListener
         pitWeightInputLayout.setOnKeyListener(null);
         pitStormTrooperShotsInputLayout.setOnKeyListener(null);
         pitCommentInputLayout.setOnKeyListener(null);
+        pitSizeInputLayout.setOnKeyListener(null);
+
     }
 
     @Override
@@ -173,7 +183,7 @@ public class PitActivity extends AppCompatActivity implements View.OnKeyListener
                         pitTeamNumberInputLayout.setError(null);
                         break;
 
-                    case R.id.pit_powerCellTop_input:
+                    case R.id.PitCargoTop_input:
                         pitPowerCellTopInputLayout.setError(null);
                         break;
 
@@ -187,6 +197,9 @@ public class PitActivity extends AppCompatActivity implements View.OnKeyListener
 
                     case R.id.pit_stormTrooperShots_input:
                         pitStormTrooperShotsInputLayout.setError(null);
+                        break;
+                    case R.id.pit_size_input_layout:
+                        pitSizeInputLayout.setError(null);
                         break;
                 }
             }
@@ -221,6 +234,9 @@ public class PitActivity extends AppCompatActivity implements View.OnKeyListener
         } else if (StringUtils.isEmptyOrNull(getTextInputLayoutString(pitStormTrooperShotsInputLayout))) {
             pitStormTrooperShotsInputLayout.setError(getText(R.string.pitStormTrooperShotsError));
             ViewUtils.requestFocus(pitStormTrooperShotsInputLayout, this);
+        } else if (StringUtils.isEmptyOrNull(getTextInputLayoutString(pitSizeInputLayout))) {
+            pitSizeInputLayout.setError(getText(R.string.pitSizeError));
+            ViewUtils.requestFocus(pitSizeInputLayout, this);
         } else {
             allInputsPassed = true;
         }
@@ -252,6 +268,7 @@ public class PitActivity extends AppCompatActivity implements View.OnKeyListener
                 pitDataStringList.add(getTextInputLayoutString(pitWeightInputLayout));
                 pitDataStringList.add(getTextInputLayoutString(pitStormTrooperShotsInputLayout));
                 pitDataStringList.add(getTextInputLayoutString(pitCommentInputLayout));
+                pitDataStringList.add(getTextInputLayoutString(pitSizeInputLayout));
 
 
                 String message = FormatStringUtils.addDelimiter(pitDataStringList, ",") + "\n";
@@ -283,6 +300,7 @@ public class PitActivity extends AppCompatActivity implements View.OnKeyListener
         pitPowerCellBottomInputLayout.setError(null);
         pitWeightInputLayout.setError(null);
         pitStormTrooperShotsInputLayout.setError(null);
+        pitSizeInputLayout.setError(null);
     }
 
     public void takePhoto(View view) {
@@ -367,6 +385,7 @@ public class PitActivity extends AppCompatActivity implements View.OnKeyListener
         pitProgrammingLanguageRadiobtnGrp.clearCheck();
 
         pitWeightInput.setText("");
+        pitSizeInput.setText("");
         pitStormTrooperShotsInput.setText("");
         pitCommentInput.setText("");
     }
