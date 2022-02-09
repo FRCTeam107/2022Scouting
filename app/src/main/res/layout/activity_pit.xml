@@ -175,36 +175,6 @@
                     android:text="@string/pitClimbLevelNotAttempted" />
             </RadioGroup>
 
-            <TextView
-                android:id="@+id/pit_climbBoolean_TextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/pitClimbBoolean"
-                app:layout_constraintLeft_toRightOf="parent"
-                app:layout_constraintRight_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/pit_climbLevel_RadiobtnGrp"/>
-
-            <RadioGroup
-                android:id="@+id/pit_climbBoolean_RadiobtnGrp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/pit_climbBoolean_TextView">
-
-                <RadioButton
-                    android:id="@+id/pitClimbYes_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/pitClimbYes" />
-
-                <RadioButton
-                    android:id="@+id/pitClimbNo_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/pitClimbNo" />
-            </RadioGroup>
 
             <TextView
                 android:id="@+id/pit_programmingLanguage_TextView"
@@ -213,7 +183,7 @@
                 android:text="@string/pitProgrammingLanguage"
                 app:layout_constraintLeft_toRightOf="parent"
                 app:layout_constraintRight_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/pit_climbBoolean_RadiobtnGrp"/>
+                app:layout_constraintTop_toBottomOf="@+id/pit_climbLevel_RadiobtnGrp"/>
 
             <RadioGroup
                 android:id="@+id/pit_programmingLanguage_RadiobtnGrp"
