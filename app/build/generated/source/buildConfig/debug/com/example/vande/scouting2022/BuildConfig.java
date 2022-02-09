@@ -5,7 +5,7 @@ package com.example.vande.scouting2022;
 
 public final class BuildConfig {
   public static final boolean DEBUG = Boolean.parseBoolean("true");
-  public static final String APPLICATION_ID = "com.example.vande.scouting2018";
+  public static final String APPLICATION_ID = "com.example.team107.scouting2022";
   public static final String BUILD_TYPE = "debug";
   public static final String FLAVOR = "";
   public static final int VERSION_CODE = 1;

@@ -8,6 +8,7 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity implements View.OnKeyListener {
@@ -55,9 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnKeyListene
         return false;
     }
 
-    public void showMatch(View view) {
-        startActivity(new Intent(this, ScouterInitialsActivity.class));
-    }
+    public void showMatch(View view) {startActivity(new Intent(this, ScouterInitialsActivity.class)); }
 
     public void showPit(View view) {
         startActivity(new Intent(this, PitActivity.class));
@@ -66,4 +65,9 @@ public class MainActivity extends AppCompatActivity implements View.OnKeyListene
     public void sendData(View view) {
         startActivity(new Intent(this, SendDataActivity.class));
     }
+
+    public void sendTBA(View view) {
+        startActivity(new Intent(this, AnalysisActivity.class));
+    }
+
 }
