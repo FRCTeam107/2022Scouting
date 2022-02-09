@@ -1,20 +1,20 @@
 -- Merging decision tree log ---
 provider#android.support.v4.content.FileProvider
-INJECTED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:31:9-39:20
+INJECTED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:32:9-40:20
 	android:grantUriPermissions
-		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:35:13-47
+		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:36:13-47
 	android:authorities
 		INJECTED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:33:13-60
+		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:34:13-60
 	android:exported
-		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:34:13-37
+		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:35:13-37
 	android:name
-		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:32:13-67
+		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:33:13-67
 manifest
-ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:2:1-42:12
+ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:2:1-43:12
+INJECTED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:2:1-43:12
+INJECTED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:2:1-43:12
+INJECTED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:2:1-43:12
 MERGED from [com.android.support:design:28.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\9d7250a774d78c6da773e4ce19c93e82\design-28.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\7f5f0b3369d8fa8a72a20e2278ec0acc\appcompat-v7-28.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\cb20b76ed225fe8217fdebe6b4cd159d\constraint-layout-1.0.2\AndroidManifest.xml:2:1-11:12
@@ -49,20 +49,20 @@ MERGED from [com.android.support:interpolator:28.0.0] C:\Users\vande\.gradle\cac
 MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\855199d21a2457dffd94f776f414402b\livedata-1.1.1\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\0c580ad6917269345b415f2689381fa7\livedata-core-1.1.1\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\32c3c3c1ff1572cd4fbf4adc8b2e281b\runtime-1.1.1\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:2:1-43:12
+INJECTED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:2:1-43:12
+INJECTED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:2:1-43:12
 	package
 		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:3:5-45
 		INJECTED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:2:1-42:12
+		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:2:1-43:12
 		INJECTED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:2:1-42:12
+		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:2:1-43:12
 		INJECTED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:2:11-69
@@ -78,12 +78,16 @@ uses-permission#android.permission.READ_EXTERNAL_STORAGE
 ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:7:5-80
 	android:name
 		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:7:22-77
-uses-permission#android.permission.INTERNET
-ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:8:5-66
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:8:5-78
 	android:name
-		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:8:22-64
+		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:8:22-76
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:9:5-66
+	android:name
+		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:9:22-64
 application
-ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:10:5-40:19
+ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:11:5-41:19
 MERGED from [com.android.support:design:28.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\9d7250a774d78c6da773e4ce19c93e82\design-28.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:28.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\9d7250a774d78c6da773e4ce19c93e82\design-28.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\cb20b76ed225fe8217fdebe6b4cd159d\constraint-layout-1.0.2\AndroidManifest.xml:9:5-20
@@ -99,55 +103,55 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\vande\.gra
 	android:appComponentFactory
 		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\vande\.gradle\caches\transforms-2\files-2.1\b73d0db3c489aeab8b531c92b0313ef9\support-compat-28.0.0\AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:15:9-35
+		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:16:9-35
 	android:label
-		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:13:9-41
+		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:14:9-41
 	android:roundIcon
-		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:14:9-54
+		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:15:9-54
 	android:icon
-		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:12:9-43
+		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:13:9-43
 	android:allowBackup
-		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:11:9-35
+		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:12:9-35
 	android:theme
-		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:16:9-40
+		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:17:9-40
 activity#com.example.vande.scouting2022.MainActivity
-ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:17:9-23:20
+ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:18:9-24:20
 	android:name
-		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:17:19-47
+		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:18:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:18:13-22:29
+ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:19:13-23:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:19:17-69
+ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:20:17-69
 	android:name
-		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:19:25-66
+		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:20:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:21:17-77
+ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:22:17-77
 	android:name
-		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:21:27-74
+		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:22:27-74
 activity#com.example.vande.scouting2022.ScouterInitialsActivity
-ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:24:9-61
+ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:25:9-61
 	android:name
-		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:24:19-58
+		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:25:19-58
 activity#com.example.vande.scouting2022.AutonActivity
-ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:25:9-51
+ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:26:9-51
 	android:name
-		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:25:19-48
+		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:26:19-48
 activity#com.example.vande.scouting2022.TeleopActivity
-ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:26:9-52
+ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:27:9-52
 	android:name
-		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:26:19-49
+		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:27:19-49
 activity#com.example.vande.scouting2022.PitActivity
-ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:27:9-49
+ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:28:9-49
 	android:name
-		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:27:19-46
+		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:28:19-46
 activity#com.example.vande.scouting2022.SendDataActivity
-ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:28:9-54
-	android:name
-		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:28:19-51
-activity#com.example.vande.scouting2022.AnalysisActivity
-ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:29:9-53
+ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:29:9-54
 	android:name
 		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:29:19-51
+activity#com.example.vande.scouting2022.AnalysisActivity
+ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:30:9-53
+	android:name
+		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:30:19-51
 uses-sdk
 INJECTED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml
@@ -231,8 +235,8 @@ INJECTED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidMan
 		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:36:13-38:58
+ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:37:13-39:58
 	android:resource
-		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:38:17-55
+		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:39:17-55
 	android:name
-		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:37:17-67
+		ADDED from C:\Users\vande\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:38:17-67

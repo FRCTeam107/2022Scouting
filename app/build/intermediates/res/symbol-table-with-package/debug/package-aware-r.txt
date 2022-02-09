@@ -1,4 +1,4 @@
-com.example.vande.scouting2018
+com.example.team107.scouting2022
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -25,6 +25,7 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array radio_buttons
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -1070,7 +1071,7 @@ id chains
 id checkbox
 id chronometer
 id climbLevel_textView
-id climberRung_RadiobtnGrp
+id climberRung_MultiRadiobtnGrp
 id clip_horizontal
 id clip_vertical
 id collapseActionView
@@ -1103,7 +1104,6 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
-id failed_btn
 id fastClimb_btn
 id fast_btn
 id fill
@@ -1118,7 +1118,6 @@ id get_data
 id get_response_data
 id ghost_view
 id group_divider
-id highRung_btn
 id home
 id homeAsUp
 id humanPlayerShot_TextView
@@ -1142,7 +1141,6 @@ id line1
 id line3
 id listMode
 id list_item
-id lowRung_btn
 id main_activity
 id masked
 id matchNumber_input
@@ -1153,7 +1151,6 @@ id match_button
 id mediumClimb_btn
 id medium_btn
 id message
-id midRung_btn
 id middle
 id mini
 id mtrl_child_content_container
@@ -1168,7 +1165,6 @@ id next_button
 id noDefense_btn
 id none
 id normal
-id notAttempted_btn
 id notMovingClimb_btn
 id notMoving_btn
 id notification_background
@@ -1262,7 +1258,7 @@ id snap
 id snapMargins
 id spacer
 id speed_RadiobtnGrp
-id speed_climb_RadiobtnGrp
+id speed_climb_Radio_textview
 id speed_textView
 id speedofrobotClimbingnGrp
 id split_action_bar
@@ -1309,7 +1305,6 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
-id traversalRung_btn
 id uniform
 id unlabeled
 id up

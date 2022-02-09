@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 30
     defaultConfig {
-        applicationId "com.example.vande.scouting2018"
+        applicationId "com.example.team107.scouting2022"
         minSdkVersion 17
         targetSdkVersion 30
         versionCode 1

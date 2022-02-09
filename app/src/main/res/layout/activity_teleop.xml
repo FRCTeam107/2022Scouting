@@ -264,7 +264,6 @@
             android:maxLength="5"
             android:inputType="number"
             android:textSize="16sp" />
-
         </android.support.design.widget.TextInputLayout>
 
         <TextView
@@ -277,72 +276,27 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/DefenseTeam_input_layout" />
 
-        <RadioGroup
-            android:id="@+id/climberRung_RadiobtnGrp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/climbLevel_textView">
-<!--            <TableLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:stretchColumns="100">-->
 
-<!--                <TableRow>-->
-            <RadioButton
-                android:id="@+id/lowRung_btn"
-                android:layout_width="wrap_content"
+        <com.whygraphics.multilineradiogroup.MultiLineRadioGroup xmlns:multi_line_radio_group="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/climberRung_MultiRadiobtnGrp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/lowRung" />
+                multi_line_radio_group:default_button="button_2"
+                multi_line_radio_group:max_in_row="3"
+                multi_line_radio_group:radio_buttons="@array/radio_buttons"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/climbLevel_textView"
+            app:layout_constraintRight_toRightOf="parent"/>
 
-                    <RadioButton
-                        android:id="@+id/midRung_btn"
-                        android:layout_width="121dp"
-                        android:layout_height="wrap_content"
-                        android:text="@string/midRung" />
 
-                    <RadioButton
-                        android:id="@+id/highRung_btn"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/highRung" />
-<!--                </TableRow>-->
-
-<!--                <TableRow android:layout_width="270dp">-->
-
-                    <RadioButton
-                        android:id="@+id/traversalRung_btn"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/traversalRung" />
-
-                    <RadioButton
-                        android:id="@+id/notAttempted_btn"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/noDefense" />
-
-                    <RadioButton
-                        android:id="@+id/failed_btn"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/failed" />
-<!--                </TableRow>-->
-<!--            </TableLayout>-->
-
-        </RadioGroup>
         <TextView
-            android:id="@+id/speed_climb_RadiobtnGrp"
+            android:id="@+id/speed_climb_Radio_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/speed_climbheading"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/climberRung_RadiobtnGrp" />
+            app:layout_constraintTop_toBottomOf="@+id/climberRung_MultiRadiobtnGrp" />
 
         <RadioGroup
             android:id="@+id/speedofrobotClimbingnGrp"
@@ -351,7 +305,7 @@
             android:orientation="horizontal"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/speed_climb_RadiobtnGrp">
+            app:layout_constraintTop_toBottomOf="@+id/speed_climb_Radio_textview">
 
             <RadioButton
                 android:id="@+id/notMovingClimb_btn"

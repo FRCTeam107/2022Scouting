@@ -3,6 +3,7 @@ package com.example.vande.scouting2022;
 import android.Manifest;
 import android.os.Environment;
 
+import android.provider.MediaStore;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputEditText;
@@ -35,6 +36,7 @@ import utils.PermissionUtils;
 import utils.StringUtils;
 import utils.ViewUtils;
 
+import static android.R.attr.checkedButton;
 import static android.R.attr.value;
 import static com.example.vande.scouting2022.AutonActivity.AUTON_STRING_EXTRA;
 import static com.example.vande.scouting2022.AutonActivity.MATCH_STRING_EXTRA;
@@ -79,7 +81,7 @@ public class TeleopActivity extends AppCompatActivity implements View.OnKeyListe
     @BindView(R.id.fouls_checkBox)
     public CheckBox foulsCheckBox;
 
-   @BindView(R.id.climberRung_RadiobtnGrp)
+   @BindView(R.id.climberRung_MultiRadiobtnGrp)
    public RadioGroup climberRungRadiobtnGrp;
 
     @BindView(R.id.speed_RadiobtnGrp)
@@ -127,7 +129,7 @@ public class TeleopActivity extends AppCompatActivity implements View.OnKeyListe
 
         displayHighHubInput(teleopHighHub);
         displayLowHubInput(teleopLowHub);
-//        displayDefenseTeamInput(DefenseTeam_input);
+
     }
 
     /*If this activity is resumed from a paused state the data
@@ -140,7 +142,6 @@ public class TeleopActivity extends AppCompatActivity implements View.OnKeyListe
         HighHubPortinput.setOnKeyListener(this);
         teleopLowHub_input.setOnKeyListener(this);
         DefenseTeaminput.setOnKeyListener(this);
-       // teleopBottomPortInput.setOnKeyListener(this);
     }
 
     /*If this activity enters a paused state the data will be set to null*/
@@ -151,7 +152,6 @@ public class TeleopActivity extends AppCompatActivity implements View.OnKeyListe
         HighHubPortinput.setOnKeyListener(null);
         teleopLowHub_input.setOnKeyListener(null);
         DefenseTeaminput.setOnKeyListener(null);
-       // teleopBottomPortInput.setOnKeyListener(null);
     }
 
     /* This method will display the options menu when the icon is pressed
@@ -285,12 +285,14 @@ public class TeleopActivity extends AppCompatActivity implements View.OnKeyListe
 //            return;
 //        }
 
-        final String powerCellPickup = (FixedcheckBox.isChecked() ? "Loading Station" : "") +
+        MultiLineRadioGroup mMultiLineRadioGroup = (MultiLineRadioGroup) findViewById(R.id.climberRung_MultiRadiobtnGrp);
+
+        final String cargoPickupLocation = (FixedcheckBox.isChecked() ? "Loading Station" : "") +
                                     (VariablecheckBox.isChecked() ? " Floor" : "");
-//        final MultiLineRadioGroup climb_Radiobtn = (MultiLineRadioGroup) findViewById(climberRungRadiobtnGrp.getCheckedRadioButtonId());
-        final RadioButton climb_Radiobtn = (RadioButton) findViewById(climberRungRadiobtnGrp.getCheckedRadioButtonId());
+        final RadioButton climb_Radiobtn = (RadioButton) findViewById(mMultiLineRadioGroup.getCheckedRadioButtonId());
        final RadioButton speed_climbRadiobtn = findViewById(speedclimbRadiobtnGrp.getCheckedRadioButtonId());
         final RadioButton defense_Radiobtn = findViewById(defenseRadiobtnGrp.getCheckedRadioButtonId());
+
 
         if(PermissionUtils.getPermissions(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
             if (Environment.MEDIA_MOUNTED.equals(state)) {
@@ -306,18 +308,8 @@ public class TeleopActivity extends AppCompatActivity implements View.OnKeyListe
                 if(!VariablecheckBox.isChecked() && !FixedcheckBox.isChecked()){
                     teleopDataStringList.add("None");
                 } else {
-                    teleopDataStringList.add(powerCellPickup);
+                    teleopDataStringList.add(cargoPickupLocation);
                 }
-//
-//                climb_Radiobtn.setOnCheckedChangeListener(new MultiLineRadioGroup.OnCheckedChangeListener() {
-//                    @Override
-//                    public void onCheckedChanged(ViewGroup group, RadioButton button) {
-//                        Toast.makeText(TeleopActivity.this,
-//                                button.getText() + " was clicked",
-//                                Toast.LENGTH_SHORT).show();
-//                    }
-//                });
-
 
                 teleopDataStringList.add(speed_climbRadiobtn.getText());
                 teleopDataStringList.add(climb_Radiobtn.getText());
