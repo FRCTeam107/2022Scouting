@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.team107.scouting2022"
+    package="com.example.vande.scouting2018"
     android:versionCode="1"
     android:versionName="1.0" >
 
     <uses-sdk
         android:minSdkVersion="17"
-        android:targetSdkVersion="30" />
+        android:targetSdkVersion="29" />
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -36,17 +36,20 @@
         <activity android:name="com.example.vande.scouting2022.TeleopActivity" />
         <activity android:name="com.example.vande.scouting2022.PitActivity" />
         <activity android:name="com.example.vande.scouting2022.SendDataActivity" />
-        <activity android:name="com.example.vande.scouting2022.AnalysisActivity" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.example.team107.scouting2022.provider"
+            android:authorities="com.example.vande.scouting2018.provider"
             android:exported="false"
             android:grantUriPermissions="true" >
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/provider_paths" />
         </provider>
+
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.0.0" />
     </application>
 
 </manifest>

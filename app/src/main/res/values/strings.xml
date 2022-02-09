@@ -109,15 +109,18 @@
     <string name="pitTeleopBottom">Bottom</string>
     <string name="pitTeleopDefense">Defense</string>
 
-    <string name="pitPowerCellTop">Avg # of power cells in top</string>
-    <string name="pitPowerCellBottom">Avg # of power cells in bottom</string>
+    <string name="pitCargoTop">Avg # of cargo in high hub</string>
+    <string name="pitCargoBottom">Avg # of cargo in low hub</string>
 
-    <string name="pitControlPanel">Control Panel</string>
-    <string name="pitControlPanelStage2">Stage 2</string>
-    <string name="pitControlPanelStage3">Stage 3</string>
-    <string name="pitControlPanelNotAttempted">N/A</string>
+    <string name="pitClimbLevel">Climb level</string>
+    <string name="pitClimbLevelLowRung">Low rung</string>
+    <string name="pitClimbLevelMediumRung">Medium rung</string>
+    <string name="pitClimbLevelHighRung">High rung</string>
+    <string name="pitClimbLeveTraversalrung">Traversal rung</string>
+    <string name="pitClimbLevelNotAttempted">N/A</string>
 
     <string name="pitWeight">Weight?</string>
+    <string name="pitSize">Size?</string>
 
     <string name="pitClimbBoolean">Climb?</string>
     <string name="pitClimbYes">Yes</string>
@@ -149,4 +152,5 @@
     <string name="failed">Failed</string>
     <string name="traversalRung">Traversal rung</string>
     <string name="speed_climbheading">Speed of robot climb</string>
+    <string name="pitSizeError">Enter # of robot size</string>
 </resources>
