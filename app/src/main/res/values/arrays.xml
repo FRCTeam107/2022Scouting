@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<!--    <string-array name="radio_buttons">-->
-<!--    <item>@string/lowRung</item>-->
-<!--    <item>@string/midRung</item>-->
-<!--    <item>@string/highRung</item>-->
-<!--    <item>@string/traversalRung</item>-->
-<!--    <item>@string/noDefense</item>-->
-<!--    <item>@string/failed</item>-->
-<!--</string-array>-->
+    <string-array name="radio_buttons">
+    <item>@string/lowRung</item>
+    <item>@string/midRung</item>
+    <item>@string/highRung</item>
+    <item>@string/traversalRung</item>
+    <item>@string/noDefense</item>
+    <item>@string/failed</item>
+</string-array>
     </resources>
