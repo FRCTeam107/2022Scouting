@@ -2,6 +2,7 @@
 
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -37,8 +38,14 @@
                     android:layout_height="wrap_content"
                     android:inputType="number"
                     android:textSize="16sp" />
-            </android.support.design.widget.TextInputLayout>
 
+<!--                <android.support.design.widget.TextInputEditText-->
+<!--                    android:id="@+id/pit_weight_input"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:inputType="number"-->
+<!--                    android:textSize="16sp" />-->
+            </android.support.design.widget.TextInputLayout>
 
             <TextView
                 android:id="@+id/pit_teleopPreference_TextView"
@@ -81,7 +88,7 @@
 
 
             <android.support.design.widget.TextInputLayout
-                android:id="@+id/pit_powerCellTop_input_layout"
+                android:id="@+id/pit_cargoHighHub_input_layout"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="18dp"
@@ -116,73 +123,91 @@
                 app:errorEnabled="true"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/pit_powerCellTop_input_layout">
+                app:layout_constraintTop_toBottomOf="@+id/pit_cargoHighHub_input_layout">
 
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/pit_powerCellBottom_input"
+                    android:id="@+id/pit_cargoBottom_input"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number"
                     android:textSize="16sp" />
             </android.support.design.widget.TextInputLayout>
-
             <TextView
-                android:id="@+id/pit_climbLevel_TextView"
+                android:id="@+id/climbLevel_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/pitClimbLevel"
-                app:layout_constraintLeft_toRightOf="parent"
-                app:layout_constraintRight_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/pit_cargoBottominput_layout"/>
-
-            <RadioGroup
-                android:id="@+id/pit_climbLevel_RadiobtnGrp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginTop="40dp"
+                android:text="@string/climbLevel"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/pit_climbLevel_TextView">
-
-                <RadioButton
-                    android:id="@+id/pitControlPanelLowRung_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/pitClimbLevelLowRung" />
-
-                <RadioButton
-                    android:id="@+id/pitClimbLeveMediumRung_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/pitClimbLevelMediumRung" />
-
-                <RadioButton
-                    android:id="@+id/pitClimbLevelHighRung_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/pitClimbLevelHighRung" />
-
-                <RadioButton
-                    android:id="@+id/pitClimbLevelTraversalRung_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/pitClimbLeveTraversalrung" />
-
-                <RadioButton
-                    android:id="@+id/pitClimbLevelNotAttempted_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/pitClimbLevelNotAttempted" />
-            </RadioGroup>
+                app:layout_constraintTop_toBottomOf="@+id/pit_cargoBottominput_layout" />
 
 
+            <com.whygraphics.multilineradiogroup.MultiLineRadioGroup xmlns:multi_line_radio_group="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/pit_climbLevel_RadiobtnGrp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                multi_line_radio_group:default_button="button_2"
+                multi_line_radio_group:max_in_row="3"
+                multi_line_radio_group:radio_buttons="@array/radio_buttons"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/climbLevel_textView"
+                app:layout_constraintRight_toRightOf="parent"/>
+<!--            <TextView-->
+<!--                android:id="@+id/pit_climbLevel_TextView"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/pitClimbLevel"-->
+<!--                app:layout_constraintLeft_toRightOf="parent"-->
+<!--                app:layout_constraintRight_toLeftOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/pit_cargoBottominput_layout"/>-->
+
+<!--            <RadioGroup-->
+<!--                android:id="@+id/pit_climbLevel_RadiobtnGrp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                app:layout_constraintRight_toRightOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/pit_climbLevel_TextView">-->
+
+<!--                <RadioButton-->
+<!--                    android:id="@+id/pitControlPanelLowRung_btn"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/pitClimbLevelLowRung" />-->
+
+<!--                <RadioButton-->
+<!--                    android:id="@+id/pitClimbLeveMediumRung_btn"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/pitClimbLevelMediumRung" />-->
+
+<!--                <RadioButton-->
+<!--                    android:id="@+id/pitClimbLevelHighRung_btn"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/pitClimbLevelHighRung" />-->
+
+<!--                <RadioButton-->
+<!--                    android:id="@+id/pitClimbLevelTraversalRung_btn"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/pitClimbLeveTraversalrung" />-->
+
+<!--                <RadioButton-->
+<!--                    android:id="@+id/pitClimbLevelNotAttempted_btn"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/pitClimbLevelNotAttempted" />-->
+<!--            </RadioGroup>-->
             <TextView
                 android:id="@+id/pit_programmingLanguage_TextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/pitProgrammingLanguage"
-                app:layout_constraintLeft_toRightOf="parent"
-                app:layout_constraintRight_toLeftOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/pit_climbLevel_RadiobtnGrp"/>
 
             <RadioGroup
@@ -233,13 +258,15 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/pit_programmingLanguage_RadiobtnGrp">
-
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/pit_weight_input"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    app:layout_constraintLeft_toRightOf="parent"
+                    app:layout_constraintRight_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/pit_teamNumber_input_layout"/>
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -309,6 +336,8 @@
                     android:layout_height="wrap_content"
                     android:inputType="text"
                     android:textSize="16sp" />
+
+
             </android.support.design.widget.TextInputLayout>
 
             <Button

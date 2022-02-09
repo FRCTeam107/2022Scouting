@@ -1,9 +1,8 @@
-package com.example.vande.scouting2022;
+package com.example.vande.scouting2018;
 
 import android.Manifest;
 import android.os.Environment;
 
-import android.provider.MediaStore;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputEditText;
@@ -14,7 +13,6 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -33,14 +31,11 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import utils.FormatStringUtils;
 import utils.PermissionUtils;
-import utils.StringUtils;
-import utils.ViewUtils;
 
-import static android.R.attr.checkedButton;
 import static android.R.attr.value;
-import static com.example.vande.scouting2022.AutonActivity.AUTON_STRING_EXTRA;
-import static com.example.vande.scouting2022.AutonActivity.MATCH_STRING_EXTRA;
-import static com.example.vande.scouting2022.AutonActivity.TEAMNUMBER_STRING_EXTRA;
+import static com.example.vande.scouting2018.AutonActivity.AUTON_STRING_EXTRA;
+import static com.example.vande.scouting2018.AutonActivity.MATCH_STRING_EXTRA;
+import static com.example.vande.scouting2018.AutonActivity.TEAMNUMBER_STRING_EXTRA;
 
 import com.whygraphics.multilineradiogroup.MultiLineRadioGroup;
 
@@ -81,7 +76,7 @@ public class TeleopActivity extends AppCompatActivity implements View.OnKeyListe
     @BindView(R.id.fouls_checkBox)
     public CheckBox foulsCheckBox;
 
-   @BindView(R.id.climberRung_MultiRadiobtnGrp)
+   @BindView(R.id.pit_climbLevel_RadiobtnGrp)
    public RadioGroup climberRungRadiobtnGrp;
 
     @BindView(R.id.speed_RadiobtnGrp)
@@ -285,7 +280,7 @@ public class TeleopActivity extends AppCompatActivity implements View.OnKeyListe
 //            return;
 //        }
 
-        MultiLineRadioGroup mMultiLineRadioGroup = (MultiLineRadioGroup) findViewById(R.id.climberRung_MultiRadiobtnGrp);
+        MultiLineRadioGroup mMultiLineRadioGroup = (MultiLineRadioGroup) findViewById(R.id.pit_climbLevel_RadiobtnGrp);
 
         final String cargoPickupLocation = (FixedcheckBox.isChecked() ? "Loading Station" : "") +
                                     (VariablecheckBox.isChecked() ? " Floor" : "");
