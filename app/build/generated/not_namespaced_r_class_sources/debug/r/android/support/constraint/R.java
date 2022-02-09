@@ -60,15 +60,15 @@ public final class R {
     public static final class id {
         private id() {}
 
-        public static final int all = 0x7f090025;
-        public static final int basic = 0x7f09002d;
-        public static final int chains = 0x7f090035;
+        public static final int all = 0x7f090026;
+        public static final int basic = 0x7f09002e;
+        public static final int chains = 0x7f090036;
         public static final int none = 0x7f090095;
         public static final int packed = 0x7f09009d;
         public static final int parent = 0x7f09009f;
-        public static final int spread = 0x7f0900f8;
-        public static final int spread_inside = 0x7f0900f9;
-        public static final int wrap = 0x7f09012a;
+        public static final int spread = 0x7f0900f1;
+        public static final int spread_inside = 0x7f0900f2;
+        public static final int wrap = 0x7f090123;
     }
     public static final class styleable {
         private styleable() {}

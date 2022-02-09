@@ -1,4 +1,4 @@
-package com.example.vande.scouting2022;
+package com.example.vande.scouting2018;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,9 +16,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.vande.scouting2022.R;
-
-import org.json.JSONObject;
+import com.example.vande.scouting2018.R;
 
 import java.util.HashMap;
 import java.util.Map;

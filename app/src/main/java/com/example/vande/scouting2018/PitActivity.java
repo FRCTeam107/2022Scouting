@@ -1,4 +1,4 @@
-package com.example.vande.scouting2022;
+package com.example.vande.scouting2018;
 
 import android.Manifest;
 import android.content.Intent;
@@ -56,7 +56,7 @@ public class PitActivity extends AppCompatActivity implements View.OnKeyListener
     @BindView(R.id.pit_size_input)
     public TextInputEditText pitSizeInput;
 
-    @BindView(R.id.pit_powerCellTop_input_layout)
+    @BindView(R.id.pit_cargoHighHub_input_layout)
     public TextInputLayout pitPowerCellTopInputLayout;
 
     @BindView(R.id.pit_cargoBottominput_layout)
@@ -77,7 +77,7 @@ public class PitActivity extends AppCompatActivity implements View.OnKeyListener
     @BindView(R.id.PitCargoTop_input)
     public TextInputEditText pitPowerCellTopInput;
 
-    @BindView(R.id.pit_powerCellBottom_input)
+    @BindView(R.id.pit_cargoBottom_input)
     public TextInputEditText pitPowerCellBottomInput;
 
     @BindView(R.id.pit_weight_input)
@@ -91,9 +91,6 @@ public class PitActivity extends AppCompatActivity implements View.OnKeyListener
 
     @BindView(R.id.pit_teleopPreference_RadiobtnGrp)
     public RadioGroup pitTeleopPreferenceRadiobtnGrp;
-
-    @BindView(R.id.pit_climbBoolean_RadiobtnGrp)
-    public RadioGroup pitClimbBooleanRadiobtnGrp;
 
     @BindView(R.id.pit_climbLevel_RadiobtnGrp)
     public RadioGroup pitControlPanelRadioGrp;
@@ -187,7 +184,7 @@ public class PitActivity extends AppCompatActivity implements View.OnKeyListener
                         pitPowerCellTopInputLayout.setError(null);
                         break;
 
-                    case R.id.pit_powerCellBottom_input:
+                    case R.id.pit_cargoBottom_input:
                         pitPowerCellBottomInputLayout.setError(null);
                         break;
 
@@ -224,8 +221,6 @@ public class PitActivity extends AppCompatActivity implements View.OnKeyListener
             ViewUtils.requestFocus(pitPowerCellBottomInputLayout, this);
         } else if (pitControlPanelRadioGrp.getCheckedRadioButtonId() == -1) {
             ViewUtils.requestFocus(pitControlPanelRadioGrp, this);
-        } else if (pitClimbBooleanRadiobtnGrp.getCheckedRadioButtonId() == -1) {
-            ViewUtils.requestFocus(pitClimbBooleanRadiobtnGrp, this);
         } else if (pitProgrammingLanguageRadiobtnGrp.getCheckedRadioButtonId() == -1) {
             ViewUtils.requestFocus(pitProgrammingLanguageRadiobtnGrp, this);
         } else if (StringUtils.isEmptyOrNull(getTextInputLayoutString(pitWeightInputLayout))) {
@@ -247,7 +242,6 @@ public class PitActivity extends AppCompatActivity implements View.OnKeyListener
         //final RadioButton pitStaring_Radiobtn = findViewById(pitStartingPositionRadiobtnGrp.getCheckedRadioButtonId());
 
         final RadioButton pitTeleopPreference_Radiobtn = findViewById(pitTeleopPreferenceRadiobtnGrp.getCheckedRadioButtonId());
-        final RadioButton pitClimbBoolean_Radiobtn = findViewById(pitClimbBooleanRadiobtnGrp.getCheckedRadioButtonId());
         final RadioButton pitControlPanel_Radiobtn = findViewById(pitControlPanelRadioGrp.getCheckedRadioButtonId());
         final RadioButton pitProgrammingLanguage_Radiobtn = findViewById(pitProgrammingLanguageRadiobtnGrp.getCheckedRadioButtonId());
 
@@ -263,7 +257,6 @@ public class PitActivity extends AppCompatActivity implements View.OnKeyListener
                 pitDataStringList.add(getTextInputLayoutString(pitPowerCellTopInputLayout));
                 pitDataStringList.add(getTextInputLayoutString(pitPowerCellBottomInputLayout));
                 pitDataStringList.add(pitControlPanel_Radiobtn.getText());
-                pitDataStringList.add(pitClimbBoolean_Radiobtn.getText());
                 pitDataStringList.add(pitProgrammingLanguage_Radiobtn.getText());
                 pitDataStringList.add(getTextInputLayoutString(pitWeightInputLayout));
                 pitDataStringList.add(getTextInputLayoutString(pitStormTrooperShotsInputLayout));
@@ -381,7 +374,6 @@ public class PitActivity extends AppCompatActivity implements View.OnKeyListener
         pitPowerCellBottomInput.setText("");
 
         pitControlPanelRadioGrp.clearCheck();
-        pitClimbBooleanRadiobtnGrp.clearCheck();
         pitProgrammingLanguageRadiobtnGrp.clearCheck();
 
         pitWeightInput.setText("");
