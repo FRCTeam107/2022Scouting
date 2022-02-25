@@ -44,7 +44,7 @@
 25        android:testOnly="true"
 26        android:theme="@style/AppTheme" >
 26-->C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:17:9-40
-27        <activity android:name="com.example.vande.scouting2018.MainActivity" >
+27        <activity android:name="com.example.vande.scouting2022.MainActivity" >
 27-->C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:18:9-24:20
 27-->C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:18:19-77
 28            <intent-filter>
@@ -58,22 +58,22 @@
 31-->C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:22:27-74
 32            </intent-filter>
 33        </activity>
-34        <activity android:name="com.example.vande.scouting2018.ScouterInitialsActivity" />
+34        <activity android:name="com.example.vande.scouting2022.ScouterInitialsActivity" />
 34-->C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:25:9-91
 34-->C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:25:19-88
-35        <activity android:name="com.example.vande.scouting2018.AutonActivity" />
+35        <activity android:name="com.example.vande.scouting2022.AutonActivity" />
 35-->C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:26:9-81
 35-->C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:26:19-78
-36        <activity android:name="com.example.vande.scouting2018.TeleopActivity" />
+36        <activity android:name="com.example.vande.scouting2022.TeleopActivity" />
 36-->C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:27:9-82
 36-->C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:27:19-79
-37        <activity android:name="com.example.vande.scouting2018.PitActivity" />
+37        <activity android:name="com.example.vande.scouting2022.PitActivity" />
 37-->C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:28:9-79
 37-->C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:28:19-76
-38        <activity android:name="com.example.vande.scouting2018.SendDataActivity" />
+38        <activity android:name="com.example.vande.scouting2022.SendDataActivity" />
 38-->C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:29:9-84
 38-->C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:29:19-81
-39        <activity android:name="com.example.vande.scouting2018.AnalysisActivity" />
+39        <activity android:name="com.example.vande.scouting2022.AnalysisActivity" />
 39-->C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:30:9-83
 39-->C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:30:19-81
 40

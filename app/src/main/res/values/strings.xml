@@ -63,10 +63,11 @@
     <string name="Fixed">Fixed</string>
     <string name="Variable">Variable</string>
 
-    <string name="controlPanelHeading">Control Panel</string>
-    <string name="controlPanelStage2">Stage 2</string>
-    <string name="controlPanelStage3">Stage 3</string>
-    <string name="controlPanelNotAttempted">N/A</string>
+
+    <string name="lowRung">Low rung</string>
+    <string name="midRung">Mid rung</string>
+    <string name="highRung">High rung</string>
+    <string name="traversalRung">Traversal rung</string>
 
     <string name="speedHeading">Speed of robot</string>
     <string name="notMoving">Did not move</string>
@@ -146,11 +147,7 @@
     <string name="pitWeightError">Enter robot weight</string>
     <string name="pitStormTrooperShotsError">Enter # of Storm Trooper shots</string>
     <string name="climbLevel">Climb level</string>
-    <string name="lowRung">Low rung</string>
-    <string name="midRung">Mid rung</string>
-    <string name="highRung">High rung</string>
     <string name="failed">Failed</string>
-    <string name="traversalRung">Traversal rung</string>
     <string name="speed_climbheading">Speed of robot climb</string>
     <string name="pitSizeError">Enter # of robot size</string>
 </resources>
