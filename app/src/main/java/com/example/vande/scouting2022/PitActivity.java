@@ -1,4 +1,4 @@
-package com.example.vande.scouting2018;
+package com.example.vande.scouting2022;
 
 import android.Manifest;
 import android.content.Intent;

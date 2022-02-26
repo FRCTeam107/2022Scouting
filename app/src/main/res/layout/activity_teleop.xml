@@ -13,7 +13,7 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/decrease_teleopHighHub"
+            android:id="@+id/decrease_teleopHighHub_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="decrease_HighHubInput"
@@ -28,8 +28,8 @@
             android:layout_height="wrap_content"
             android:hint="@string/teleopHighHub"
             app:errorEnabled="true"
-            app:layout_constraintEnd_toStartOf="@+id/increase_teleopHighHub"
-            app:layout_constraintStart_toEndOf="@id/decrease_teleopHighHub"
+            app:layout_constraintEnd_toStartOf="@+id/increase_teleopHighHub_btn"
+            app:layout_constraintStart_toEndOf="@id/decrease_teleopHighHub_btn"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="UnknownId">
 
@@ -50,7 +50,7 @@
         </android.support.design.widget.TextInputLayout>
 
         <Button
-            android:id="@+id/increase_teleopHighHub"
+            android:id="@+id/increase_teleopHighHub_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="increase_HighHubInput"
@@ -60,12 +60,12 @@
             app:layout_constraintStart_toEndOf="@id/teleopHighHub_input_layout" />
 
         <Button
-            android:id="@+id/decrease_teleopLowHub"
+            android:id="@+id/decrease_teleopLowHub_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="decreaseTeleopLowHubInput"
             android:text="-"
-            app:layout_constraintTop_toBottomOf="@id/decrease_teleopHighHub"
+            app:layout_constraintTop_toBottomOf="@id/decrease_teleopHighHub_btn"
             app:layout_constraintEnd_toStartOf="@+id/teleopLowHub_input_layout"
             app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintStart_toStartOf="parent" />
@@ -76,9 +76,9 @@
             android:layout_height="wrap_content"
             android:hint="@string/teleopLowHub"
             app:errorEnabled="true"
-            app:layout_constraintTop_toBottomOf="@id/decrease_teleopHighHub"
-            app:layout_constraintEnd_toStartOf="@+id/increase_teleopLowHub"
-            app:layout_constraintStart_toEndOf="@+id/decrease_teleopLowHub">
+            app:layout_constraintTop_toBottomOf="@id/decrease_teleopHighHub_btn"
+            app:layout_constraintEnd_toStartOf="@+id/increase_teleopLowHub_btn"
+            app:layout_constraintStart_toEndOf="@+id/decrease_teleopLowHub_btn">
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/teleopLowHub_input"
@@ -96,13 +96,13 @@
         </android.support.design.widget.TextInputLayout>
 
         <Button
-            android:id="@+id/increase_teleopLowHub"
+            android:id="@+id/increase_teleopLowHub_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="increaseTeleopLowHubInput"
             android:text="+"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/decrease_teleopHighHub"
+            app:layout_constraintTop_toBottomOf="@id/decrease_teleopHighHub_btn"
             app:layout_constraintStart_toEndOf="@+id/teleopLowHub_input_layout" />
 
 
@@ -148,7 +148,7 @@
             app:layout_constraintTop_toBottomOf="@+id/ShotLocation_layout" />
 
         <RadioGroup
-            android:id="@+id/speed_RadiobtnGrp"
+            android:id="@+id/robotSpeed_RadiobtnGrp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -188,7 +188,7 @@
             android:text="@string/defenseHeading"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/speed_RadiobtnGrp" />
+            app:layout_constraintTop_toBottomOf="@+id/robotSpeed_RadiobtnGrp" />
 
         <RadioGroup
             android:id="@+id/defense_RadiobtnGrp"
@@ -229,7 +229,7 @@
             android:id="@+id/fouls_TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-                android:text="@string/fouls"
+            android:text="@string/fouls"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/defense_RadiobtnGrp" />
@@ -243,7 +243,7 @@
             app:layout_constraintTop_toBottomOf="@+id/fouls_TextView" />
 
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/DefenseTeam_input_layout"
+            android:id="@+id/defenseTeam_input_layout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="18dp"
@@ -258,7 +258,7 @@
 
 
         <android.support.design.widget.TextInputEditText
-            android:id="@+id/DefenseTeam_input"
+            android:id="@+id/defenseTeam_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxLength="5"
@@ -274,11 +274,11 @@
             android:text="@string/climbLevel"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/DefenseTeam_input_layout" />
+            app:layout_constraintTop_toBottomOf="@+id/defenseTeam_input_layout" />
 
 
         <com.whygraphics.multilineradiogroup.MultiLineRadioGroup xmlns:multi_line_radio_group="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/pit_climbLevel_RadiobtnGrp"
+                android:id="@+id/teleClimbLevel_RadiobtnGrp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 multi_line_radio_group:default_button="button_2"
@@ -296,10 +296,10 @@
             android:text="@string/speed_climbheading"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pit_climbLevel_RadiobtnGrp" />
+            app:layout_constraintTop_toBottomOf="@+id/teleClimbLevel_RadiobtnGrp" />
 
         <RadioGroup
-            android:id="@+id/speedofrobotClimbingnGrp"
+            android:id="@+id/speedOfRobotClimbing_RadiobtnGrp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -338,7 +338,7 @@
             android:layout_height="wrap_content"
             android:onClick="saveData"
             android:text="@string/saveButton"
-            app:layout_constraintTop_toBottomOf="@+id/speedofrobotClimbingnGrp"
+            app:layout_constraintTop_toBottomOf="@+id/speedOfRobotClimbing_RadiobtnGrp"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent" />

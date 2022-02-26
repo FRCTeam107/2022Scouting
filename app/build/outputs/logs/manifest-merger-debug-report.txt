@@ -114,7 +114,7 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\team107\.g
 		ADDED from C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:12:9-35
 	android:theme
 		ADDED from C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:17:9-40
-activity#com.example.vande.scouting2018.MainActivity
+activity#com.example.vande.scouting2022.MainActivity
 ADDED from C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:18:9-24:20
 	android:name
 		ADDED from C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:18:19-77
@@ -128,27 +128,27 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:22:17-77
 	android:name
 		ADDED from C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:22:27-74
-activity#com.example.vande.scouting2018.ScouterInitialsActivity
+activity#com.example.vande.scouting2022.ScouterInitialsActivity
 ADDED from C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:25:9-91
 	android:name
 		ADDED from C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:25:19-88
-activity#com.example.vande.scouting2018.AutonActivity
+activity#com.example.vande.scouting2022.AutonActivity
 ADDED from C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:26:9-81
 	android:name
 		ADDED from C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:26:19-78
-activity#com.example.vande.scouting2018.TeleopActivity
+activity#com.example.vande.scouting2022.TeleopActivity
 ADDED from C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:27:9-82
 	android:name
 		ADDED from C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:27:19-79
-activity#com.example.vande.scouting2018.PitActivity
+activity#com.example.vande.scouting2022.PitActivity
 ADDED from C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:28:9-79
 	android:name
 		ADDED from C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:28:19-76
-activity#com.example.vande.scouting2018.SendDataActivity
+activity#com.example.vande.scouting2022.SendDataActivity
 ADDED from C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:29:9-84
 	android:name
 		ADDED from C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:29:19-81
-activity#com.example.vande.scouting2018.AnalysisActivity
+activity#com.example.vande.scouting2022.AnalysisActivity
 ADDED from C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:30:9-83
 	android:name
 		ADDED from C:\Users\team107\StudioProjects\2022Scouting\app\src\main\AndroidManifest.xml:30:19-81

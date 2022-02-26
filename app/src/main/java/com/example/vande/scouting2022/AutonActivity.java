@@ -1,4 +1,4 @@
-package com.example.vande.scouting2018;
+package com.example.vande.scouting2022;
 
 import android.Manifest;
 import android.content.Intent;
@@ -48,9 +48,6 @@ public class AutonActivity extends AppCompatActivity implements View.OnKeyListen
     @BindView(R.id.autonLowHub_input_layout)
     public TextInputLayout autonLowHubInputLayout;
 
-   // @BindView(R.id.autonBottomPort_input_layout)
-   // public TextInputLayout autonBottomPortInputLayout;
-
     @BindView(R.id.teamNumber_input)
     public EditText teamNumberInput;
 
@@ -60,7 +57,7 @@ public class AutonActivity extends AppCompatActivity implements View.OnKeyListen
     @BindView(R.id.Taxi_chkbx)
     public CheckBox Taxichkbx;
 
-    @BindView(R.id.humanPlayershot_chkbx)
+    @BindView(R.id.humanPlayerShot_chkbx)
     public CheckBox humanPlayershotchkbx;
 
     @BindView(R.id.autonHighHub_input)
@@ -68,9 +65,6 @@ public class AutonActivity extends AppCompatActivity implements View.OnKeyListen
 
     @BindView(R.id.autonLowHub_input)
     public TextInputEditText autonLowHubInput;
-
-  //  @BindView(R.id.autonBottomPort_input)
-   // public TextInputEditText autonBottomPortInput;
 
     @BindView(R.id.next_button)
     public Button nextButton;
@@ -80,7 +74,7 @@ public class AutonActivity extends AppCompatActivity implements View.OnKeyListen
 
     int autonHighHub = 0;
     int autonLowHub = 0;
-    int autonBottomPort = 0;
+
 
     /*When this activity is first called,
      *we will call the activity_auton layout so we can display
@@ -96,7 +90,6 @@ public class AutonActivity extends AppCompatActivity implements View.OnKeyListen
 
         displayAutonHighHubInput(autonHighHub);
         displayAutonLowHubInput(autonLowHub);
-        //displayAutonBottomPortInput(autonBottomPort);
 
         checkForPermissions();
     }
@@ -184,24 +177,6 @@ public class AutonActivity extends AppCompatActivity implements View.OnKeyListen
     private void displayAutonLowHubInput(int number) {
         autonLowHubInput.setText("" + number);
     }
-//
-//    //Auton Bottom Power Cell Score
-//    public void decrease_autonBottomPortInput(View view) {
-//        if (autonBottomPort != 0) {
-//            autonBottomPort -= 1;
-//            displayAutonBottomPortInput(autonBottomPort);
-//        } else {
-//        }
-//    }
-//
-//    public void increase_autonBottomPortInput(View view) {
-//        autonBottomPort += 1;
-//        displayAutonBottomPortInput(autonBottomPort);
-//    }
-
-//    private void displayAutonBottomPortInput(int number) {
-//        autonBottomPortInput.setText("" + number);
-//    }
 
     /*This method will look at all of the text/number input fields and set error
     *for validation of data entry
@@ -261,11 +236,10 @@ public class AutonActivity extends AppCompatActivity implements View.OnKeyListen
 
         autonDataStringList.add(getTextInputLayoutString(teamNumberInputLayout));
         autonDataStringList.add(getTextInputLayoutString(matchNumberInputLayout));
-        autonDataStringList.add(String.valueOf(Taxichkbx.isChecked()));
-        autonDataStringList.add(String.valueOf(humanPlayershotchkbx.isChecked()));
         autonDataStringList.add(getTextInputLayoutString(autonHighHubInputLayout));
         autonDataStringList.add(getTextInputLayoutString(autonLowHubInputLayout));
-      //  autonDataStringList.add(getTextInputLayoutString(autonBottomPortInputLayout));
+        autonDataStringList.add(String.valueOf(Taxichkbx.isChecked()));
+        autonDataStringList.add(String.valueOf(humanPlayershotchkbx.isChecked()));
 
         final Intent intent = new Intent(this, TeleopActivity.class);
         intent.putExtra(AUTON_STRING_EXTRA, FormatStringUtils.addDelimiter(autonDataStringList, ","));
@@ -280,7 +254,6 @@ public class AutonActivity extends AppCompatActivity implements View.OnKeyListen
         humanPlayershotchkbx.setError(null);
         autonHighHubInputLayout.setError(null);
         autonLowHubInputLayout.setError(null);
-      //  autonBottomPortInputLayout.setError(null);
 
         matchNumberInput.requestFocus();
     }
@@ -311,11 +284,10 @@ public class AutonActivity extends AppCompatActivity implements View.OnKeyListen
         humanPlayershotchkbx.setChecked(false);
         autonHighHubInput.setText("0");
         autonLowHubInput.setText("0");
-       // autonBottomPortInput.setText("0");
+
 
         autonHighHub = 0;
         autonLowHub = 0;
-        //autonBottomPort = 0;
     }
 
 

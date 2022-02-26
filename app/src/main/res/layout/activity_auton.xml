@@ -66,10 +66,8 @@
 
             </android.support.design.widget.TextInputLayout>
 
-
-
             <Button
-                android:id="@+id/decrease_autonHighHub"
+                android:id="@+id/decrease_autonHighHub_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="decrease_autonHighHubInput"
@@ -84,8 +82,8 @@
                 android:layout_height="wrap_content"
                 android:hint="Balls in high hub"
                 app:errorEnabled="true"
-                app:layout_constraintEnd_toStartOf="@+id/increase_autonHighHub"
-                app:layout_constraintStart_toEndOf="@id/decrease_autonHighHub"
+                app:layout_constraintEnd_toStartOf="@+id/increase_autonHighHub_btn"
+                app:layout_constraintStart_toEndOf="@id/decrease_autonHighHub_btn"
                 app:layout_constraintTop_toBottomOf="@+id/teamNumber_input_layout"
                 tools:ignore="UnknownId">
 
@@ -106,7 +104,7 @@
             </android.support.design.widget.TextInputLayout>
 
             <Button
-                android:id="@+id/increase_autonHighHub"
+                android:id="@+id/increase_autonHighHub_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="increase_autonHighHubInput"
@@ -131,7 +129,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Balls in low hub"
                 app:errorEnabled="true"
-                app:layout_constraintEnd_toStartOf="@+id/increase_autonLowHub"
+                app:layout_constraintEnd_toStartOf="@+id/increase_autonLowHub_btn"
                 app:layout_constraintStart_toEndOf="@id/decrease_autonLowHub"
                 app:layout_constraintTop_toBottomOf="@+id/autonHighHub_input_layout"
                 tools:ignore="UnknownId">
@@ -153,7 +151,7 @@
             </android.support.design.widget.TextInputLayout>
 
             <Button
-                android:id="@+id/increase_autonLowHub"
+                android:id="@+id/increase_autonLowHub_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="increase_autonLowHubInput"
@@ -168,7 +166,7 @@
                 android:layout_height="30dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/increase_autonLowHub" />
+                app:layout_constraintTop_toBottomOf="@+id/increase_autonLowHub_btn" />
 
             <TextView
                 android:id="@+id/Taxi_TextView"
@@ -205,7 +203,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/Taxi_chkbx" />
 
             <CheckBox
-                android:id="@+id/humanPlayershot_chkbx"
+                android:id="@+id/humanPlayerShot_chkbx"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -223,7 +221,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/humanPlayershot_chkbx"
+                app:layout_constraintTop_toBottomOf="@+id/humanPlayerShot_chkbx"
                 app:layout_constraintVertical_bias="0.152" />
 
 

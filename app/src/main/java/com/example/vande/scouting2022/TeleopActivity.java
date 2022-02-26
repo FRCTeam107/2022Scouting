@@ -1,4 +1,4 @@
-package com.example.vande.scouting2018;
+package com.example.vande.scouting2022;
 
 import android.Manifest;
 import android.os.Environment;
@@ -31,11 +31,13 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import utils.FormatStringUtils;
 import utils.PermissionUtils;
+import utils.StringUtils;
+import utils.ViewUtils;
 
 import static android.R.attr.value;
-import static com.example.vande.scouting2018.AutonActivity.AUTON_STRING_EXTRA;
-import static com.example.vande.scouting2018.AutonActivity.MATCH_STRING_EXTRA;
-import static com.example.vande.scouting2018.AutonActivity.TEAMNUMBER_STRING_EXTRA;
+import static com.example.vande.scouting2022.AutonActivity.AUTON_STRING_EXTRA;
+import static com.example.vande.scouting2022.AutonActivity.MATCH_STRING_EXTRA;
+import static com.example.vande.scouting2022.AutonActivity.TEAMNUMBER_STRING_EXTRA;
 
 import com.whygraphics.multilineradiogroup.MultiLineRadioGroup;
 
@@ -43,11 +45,11 @@ import com.whygraphics.multilineradiogroup.MultiLineRadioGroup;
 public class TeleopActivity extends AppCompatActivity implements View.OnKeyListener {
     /*This area sets and binds all of the variables that we will use in the auton activity*/
 
-    @BindView(R.id.DefenseTeam_input_layout)
-    public TextInputLayout DefenseTeaminputlayout;
+    @BindView(R.id.defenseTeam_input_layout)
+    public TextInputLayout defenseTeaminputlayout;
 
-    @BindView(R.id.DefenseTeam_input)
-    public TextInputEditText DefenseTeaminput;
+    @BindView(R.id.defenseTeam_input)
+    public TextInputEditText defenseTeamInput;
 
     @BindView(R.id.teleopHighHub_input_layout)
     public TextInputLayout teleopHighHubinputlayout;
@@ -55,41 +57,32 @@ public class TeleopActivity extends AppCompatActivity implements View.OnKeyListe
     @BindView(R.id.teleopLowHub_input_layout)
     public TextInputLayout teleopLowHubinputlayout;
 
-   // @BindView(R.id.teleopBottomPort_input_layout)
-   // public TextInputLayout teleopBottomPortInputLayout;
-
     @BindView(R.id.HighHubPort_input)
-    public TextInputEditText HighHubPortinput;
+    public TextInputEditText teleHighHubPortInput;
 
     @BindView(R.id.teleopLowHub_input)
-    public TextInputEditText teleopLowHub_input;
-
-  //  @BindView(R.id.teleopBottomPort_input)
-  //  public TextInputEditText teleopBottomPortInput;
+    public TextInputEditText teleopLowHubInput;
 
     @BindView(R.id.Fixed_checkBox)
     public CheckBox FixedcheckBox;
 
     @BindView(R.id.Variable_checkBox)
-    public CheckBox VariablecheckBox;
+    public CheckBox variableCheckBox;
 
     @BindView(R.id.fouls_checkBox)
     public CheckBox foulsCheckBox;
 
-   @BindView(R.id.pit_climbLevel_RadiobtnGrp)
+   @BindView(R.id.teleClimbLevel_RadiobtnGrp)
    public RadioGroup climberRungRadiobtnGrp;
 
-    @BindView(R.id.speed_RadiobtnGrp)
-    public RadioGroup speedRadiobtnGrp;
-
-   // @BindView(R.id.climberRung_RadiobtnGrp)
-  //  public RadioGroup climberRungRadiobtnGrp;
+    @BindView(R.id.robotSpeed_RadiobtnGrp)
+    public RadioGroup robotSpeedRadiobtnGrp;
 
     @BindView(R.id.defense_RadiobtnGrp)
     public RadioGroup defenseRadiobtnGrp;
 
-    @BindView(R.id.speedofrobotClimbingnGrp)
-    public RadioGroup speedclimbRadiobtnGrp;
+    @BindView(R.id.speedOfRobotClimbing_RadiobtnGrp)
+    public RadioGroup speedOfRobotClimbingRadiobtnGrp;
 
     @BindView(R.id.save_btn)
     public Button saveBtn;
@@ -134,9 +127,9 @@ public class TeleopActivity extends AppCompatActivity implements View.OnKeyListe
     protected void onResume() {
         super.onResume();
 
-        HighHubPortinput.setOnKeyListener(this);
-        teleopLowHub_input.setOnKeyListener(this);
-        DefenseTeaminput.setOnKeyListener(this);
+        teleHighHubPortInput.setOnKeyListener(this);
+        teleopLowHubInput.setOnKeyListener(this);
+        defenseTeamInput.setOnKeyListener(this);
     }
 
     /*If this activity enters a paused state the data will be set to null*/
@@ -144,9 +137,9 @@ public class TeleopActivity extends AppCompatActivity implements View.OnKeyListe
     protected void onPause() {
         super.onPause();
 
-        HighHubPortinput.setOnKeyListener(null);
-        teleopLowHub_input.setOnKeyListener(null);
-        DefenseTeaminput.setOnKeyListener(null);
+        teleHighHubPortInput.setOnKeyListener(null);
+        teleopLowHubInput.setOnKeyListener(null);
+        defenseTeamInput.setOnKeyListener(null);
     }
 
     /* This method will display the options menu when the icon is pressed
@@ -190,7 +183,7 @@ public class TeleopActivity extends AppCompatActivity implements View.OnKeyListe
     }
 
     private void displayHighHubInput(int number) {
-        HighHubPortinput.setText("" + number);
+        teleHighHubPortInput.setText("" + number);
     }
 
     //Teleop outer power cell score
@@ -210,7 +203,7 @@ public class TeleopActivity extends AppCompatActivity implements View.OnKeyListe
 
 
     private void displayLowHubInput(int number) {
-        teleopLowHub_input.setText("" + number);
+        teleopLowHubInput.setText("" + number);
     }
 
 
@@ -234,8 +227,8 @@ public class TeleopActivity extends AppCompatActivity implements View.OnKeyListe
                         teleopLowHubinputlayout.setError(null);
                         break;
 
-                    case R.id.DefenseTeam_input:
-                        DefenseTeaminputlayout.setError(null);
+                    case R.id.defenseTeam_input:
+                        defenseTeaminputlayout.setError(null);
                         break;
 
                 }
@@ -257,35 +250,37 @@ public class TeleopActivity extends AppCompatActivity implements View.OnKeyListe
         String state = Environment.getExternalStorageState();
         boolean allInputsPassed = false;
 
-//        if (StringUtils.isEmptyOrNull(getTextInputLayoutString(teleopHighHubinputlayout))) {
-//            teleopHighHubinputlayout.setError(getText(R.string.teleopInnerPowerCellError));
-//            ViewUtils.requestFocus(teleopHighHubinputlayout, this);
-//        } else if (StringUtils.isEmptyOrNull(getTextInputLayoutString(teleopLowHubinputlayout))) {
-//            teleopLowHubinputlayout.setError(getText(R.string.teleopOuterPowerCellError));
-//            ViewUtils.requestFocus(teleopLowHubinputlayout, this);
-//        } else if (StringUtils.isEmptyOrNull(getTextInputLayoutString(DefenseTeaminputlayout))) {
-//            DefenseTeaminputlayout.setError(getText(R.string.teleopBottomPowerCellError));
-//           ViewUtils.requestFocus(DefenseTeaminputlayout, this);
-//       } else if (speedclimbRadiobtnGrp.getCheckedRadioButtonId() == -1) {
-//            ViewUtils.requestFocus(speedclimbRadiobtnGrp, this);
-//
-//        } else if (climberRungRadiobtnGrp.getCheckedRadioButtonId() == -1) {
-//            ViewUtils.requestFocus(climberRungRadiobtnGrp, this);
-//        } else if (defenseRadiobtnGrp.getCheckedRadioButtonId() == -1) {
-//            ViewUtils.requestFocus(defenseRadiobtnGrp, this);
-//        } else {
-//            allInputsPassed = true;
-//        }
-//        if (!allInputsPassed) {
-//            return;
-//        }
+        if (StringUtils.isEmptyOrNull(getTextInputLayoutString(teleopHighHubinputlayout))) {
+            teleopHighHubinputlayout.setError(getText(R.string.teleopInnerPowerCellError));
+            ViewUtils.requestFocus(teleopHighHubinputlayout, this);
+        } else if (StringUtils.isEmptyOrNull(getTextInputLayoutString(teleopLowHubinputlayout))) {
+            teleopLowHubinputlayout.setError(getText(R.string.teleopOuterPowerCellError));
+            ViewUtils.requestFocus(teleopLowHubinputlayout, this);
+        } else if (StringUtils.isEmptyOrNull(getTextInputLayoutString(defenseTeaminputlayout))) {
+            defenseTeaminputlayout.setError(getText(R.string.teleopBottomPowerCellError));
+           ViewUtils.requestFocus(defenseTeaminputlayout, this);
+       } else if (speedOfRobotClimbingRadiobtnGrp.getCheckedRadioButtonId() == -1) {
+            ViewUtils.requestFocus(speedOfRobotClimbingRadiobtnGrp, this);
+        }else if (robotSpeedRadiobtnGrp.getCheckedRadioButtonId()== -1){
+            ViewUtils.requestFocus(robotSpeedRadiobtnGrp, this);
+        } else if (climberRungRadiobtnGrp.getCheckedRadioButtonId() == -1) {
+            ViewUtils.requestFocus(climberRungRadiobtnGrp, this);
+        } else if (defenseRadiobtnGrp.getCheckedRadioButtonId() == -1) {
+            ViewUtils.requestFocus(defenseRadiobtnGrp, this);
+        } else {
+            allInputsPassed = true;
+        }
+        if (!allInputsPassed) {
+            return;
+        }
 
-        MultiLineRadioGroup mMultiLineRadioGroup = (MultiLineRadioGroup) findViewById(R.id.pit_climbLevel_RadiobtnGrp);
+        MultiLineRadioGroup mMultiLineRadioGroup = (MultiLineRadioGroup) findViewById(R.id.teleClimbLevel_RadiobtnGrp);
 
         final String cargoPickupLocation = (FixedcheckBox.isChecked() ? "Loading Station" : "") +
-                                    (VariablecheckBox.isChecked() ? " Floor" : "");
-        final RadioButton climb_Radiobtn = (RadioButton) findViewById(mMultiLineRadioGroup.getCheckedRadioButtonId());
-       final RadioButton speed_climbRadiobtn = findViewById(speedclimbRadiobtnGrp.getCheckedRadioButtonId());
+                                    (variableCheckBox.isChecked() ? " Floor" : "");
+        final RadioButton robotSpeed_Radiobtn = findViewById(robotSpeedRadiobtnGrp.getCheckedRadioButtonId());
+        final RadioButton climbRung_Radiobtn = (RadioButton) findViewById(mMultiLineRadioGroup.getCheckedRadioButtonId());
+       final RadioButton speed_climbRadiobtn = findViewById(speedOfRobotClimbingRadiobtnGrp.getCheckedRadioButtonId());
         final RadioButton defense_Radiobtn = findViewById(defenseRadiobtnGrp.getCheckedRadioButtonId());
 
 
@@ -298,32 +293,21 @@ public class TeleopActivity extends AppCompatActivity implements View.OnKeyListe
 
                 teleopDataStringList.add(getTextInputLayoutString(teleopHighHubinputlayout));
                 teleopDataStringList.add(getTextInputLayoutString(teleopLowHubinputlayout));
-                teleopDataStringList.add(getTextInputLayoutString(DefenseTeaminputlayout));
-
-                if(!VariablecheckBox.isChecked() && !FixedcheckBox.isChecked()){
+                if(!variableCheckBox.isChecked() && !FixedcheckBox.isChecked()){
                     teleopDataStringList.add("None");
                 } else {
                     teleopDataStringList.add(cargoPickupLocation);
                 }
-
-                teleopDataStringList.add(speed_climbRadiobtn.getText());
-                teleopDataStringList.add(climb_Radiobtn.getText());
+                teleopDataStringList.add(robotSpeed_Radiobtn.getText());
                 teleopDataStringList.add(defense_Radiobtn.getText());
-
+                teleopDataStringList.add(getTextInputLayoutString(defenseTeaminputlayout));
                 teleopDataStringList.add(String.valueOf(foulsCheckBox.isChecked()));
 
+                teleopDataStringList.add(climbRung_Radiobtn.getText());
+                teleopDataStringList.add(speed_climbRadiobtn.getText());
+
+
                 teleopDataStringList.add(ScouterInitialsActivity.getInitials());
-
-//                String headers = "teamNumber, matchNumber, initiationLine, autonInner, autonOuter, autonBottom, teleopInner, teleopOuter, teleopBottom," +
-//                        " pickupLocation, controlPanel, climb, defense, fouls, scouterInitials\n";
-
-//                String message = "";
-//
-//                if(file.length() == 0){
-//                    message = headers + auton + "," + FormatStringUtils.addDelimiter(teleopDataStringList, ",") + "\n";
-//                } else{
-//                    message =  auton + "," + FormatStringUtils.addDelimiter(teleopDataStringList, ",") + "\n";
-//                }
 
                 String message =  auton + "," + FormatStringUtils.addDelimiter(teleopDataStringList, ",") + "\n";
 
@@ -351,21 +335,21 @@ public class TeleopActivity extends AppCompatActivity implements View.OnKeyListe
 
         teleopHighHubinputlayout.setError(null);
         teleopLowHubinputlayout.setError(null);
-        DefenseTeaminputlayout.setError(null);
+        defenseTeaminputlayout.setError(null);
     }
 
     /*The method will clear all the data in the text fields, checkboxes, and
     * set radio buttons to default*/
     public void clearData(View view) {
-        HighHubPortinput.setText("" + teleopHighHub);
-        teleopLowHub_input.setText("" + teleopLowHub);
-        DefenseTeaminput.setText("");
+        teleHighHubPortInput.setText("" + teleopHighHub);
+        teleopLowHubInput.setText("" + teleopLowHub);
+        defenseTeamInput.setText("");
 
-        VariablecheckBox.setChecked(false);
+        variableCheckBox.setChecked(false);
         FixedcheckBox.setChecked(false);
         foulsCheckBox.setChecked(false);
 
-        speedclimbRadiobtnGrp.clearCheck();
+        speedOfRobotClimbingRadiobtnGrp.clearCheck();
         climberRungRadiobtnGrp.clearCheck();
         defenseRadiobtnGrp.clearCheck();
     }
@@ -375,4 +359,7 @@ public class TeleopActivity extends AppCompatActivity implements View.OnKeyListe
         final EditText editText = textInputLayout.getEditText();
         return editText != null && editText.getText() != null ? editText.getText().toString() : "";
     }
+
+
+
 }
