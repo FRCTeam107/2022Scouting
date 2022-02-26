@@ -1467,6 +1467,7 @@ string failSwitch
 string failed
 string farRightStarting
 string fast
+string fastClimb
 string fouls
 string hide_bottom_view_on_scroll_behavior
 string highRung
@@ -1479,9 +1480,11 @@ string matchNumberError
 string matchNumberHeading
 string matchScouting
 string medium
+string mediumClimb
 string midRung
 string mtrl_chip_close_icon_content_description
 string nextButton
+string noClimb
 string noDefense
 string notAttemptedBaseline
 string notAttemptedScale
@@ -1533,6 +1536,7 @@ string scouterInitialsError
 string search_menu_title
 string sendData
 string slow
+string slowClimb
 string speedHeading
 string speed_climbheading
 string status_bar_notification_info_overflow

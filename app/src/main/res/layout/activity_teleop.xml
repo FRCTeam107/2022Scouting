@@ -311,25 +311,25 @@
                 android:id="@+id/notMovingClimb_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/notMoving" />
+                android:text="@string/noClimb" />
 
             <RadioButton
                 android:id="@+id/slowClimb_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/slow" />
+                android:text="@string/slowClimb" />
 
             <RadioButton
                 android:id="@+id/mediumClimb_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/medium" />
+                android:text="@string/mediumClimb" />
 
             <RadioButton
                 android:id="@+id/fastClimb_btn"
                 android:layout_width="64dp"
                 android:layout_height="wrap_content"
-                android:text="@string/fast" />
+                android:text="@string/fastClimb" />
         </RadioGroup>
 
         <Button

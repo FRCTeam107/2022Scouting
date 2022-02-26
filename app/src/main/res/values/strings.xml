@@ -150,4 +150,8 @@
     <string name="failed">Failed</string>
     <string name="speed_climbheading">Speed of robot climb</string>
     <string name="pitSizeError">Enter # of robot size</string>
+    <string name="noClimb">N/A</string>
+    <string name="slowClimb">Slow</string>
+    <string name="mediumClimb">Medium</string>
+    <string name="fastClimb">Fast</string>
 </resources>
